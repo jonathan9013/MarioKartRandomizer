@@ -179,33 +179,33 @@ def randomizeTrack():
 	if trackReset == 0:
 		usedTracks = []
 
-def main():
-	makeLists([],[])
-	userInput = input("Enter Command: ")
-	while userInput != 'exit':
-		match userInput:
-			case "randomize":
-				randomize()
-				print(currentSetup)
-			case "reroll character":
-				randomizeAspect("character")
-				print(currentSetup)
-			case "reroll kart":
-				randomizeAspect("kart")
-				print(currentSetup)
-			case "reroll tires":
-				randomizeAspect("tires")
-				print(currentSetup)
-			case "reroll glider":
-				randomizeAspect("glider")
-				print(currentSetup)
-			case "randomize track":
-				randomizeTrack()
-				print(currentTrack)
-			case _:
-				print("Error Unrecognized Command Try Again")
-		userInput = input("Enter New Command: ")
-	print("goodbye")
+# def main():
+# 	makeLists([],[])
+# 	userInput = input("Enter Command: ")
+# 	while userInput != 'exit':
+# 		match userInput:
+# 			case "randomize":
+# 				randomize()
+# 				print(currentSetup)
+# 			case "reroll character":
+# 				randomizeAspect("character")
+# 				print(currentSetup)
+# 			case "reroll kart":
+# 				randomizeAspect("kart")
+# 				print(currentSetup)
+# 			case "reroll tires":
+# 				randomizeAspect("tires")
+# 				print(currentSetup)
+# 			case "reroll glider":
+# 				randomizeAspect("glider")
+# 				print(currentSetup)
+# 			case "randomize track":
+# 				randomizeTrack()
+# 				print(currentTrack)
+# 			case _:
+# 				print("Error Unrecognized Command Try Again")
+# 		userInput = input("Enter New Command: ")
+# 	print("goodbye")
 
-if __name__=="__main__":
-	main()
+# if __name__=="__main__":
+# 	main()
