@@ -22,6 +22,55 @@ currentSetup =  {"character": "",
 				 "kart": "",
 				 "tire": "",
 				 "glider": ""}
+
+tracks = ["Mario Kart Stadium", "Water Park", "Sweet Sweet Canyon", "Thwomp Ruins",
+		  "Mario Circuit", "Toad Harbor", "Twisted Mansion", "Shy Guy Falls", 
+		  "Sunshine Airport", "Dolphin Shoals", "Electrodome", "Mount Wario", 
+		  "Cloudtop Cruise", "Bone-Dry Dunes", "Bowser's Castle", "Rainbow Road (Special Cup)", 
+		  "Yoshi Circuit", "Excitebike Arena", "Dragon Driftway", "Mute City", 
+		  "Baby Park", "Cheese Land", "Wild Woods", "Animal Crossing", 
+		  "Moo Moo Meadows", "Mario Circuit", "Cheep Cheep Beach", "Toad's Turnpike", 
+		  "Dry Dry Desert", "Donut Plains 3", "Royal Raceway", "DK Jungle", 
+		  "Wario Stadium", "Sherbert Land", "Music Park", "Yoshi Valley",
+		  "Tick-Tock Clock", "Piranha Plant Slide", "Grumble Volcano", "Rainbow Road (Lightning Cup)",
+		  "Wario's Gold Mine", "Rainbow Road (Triforce Cup)", "Ice Ice Outpost", "Hyrule Circuit",
+		  "Neo Bowser City", "Ribbon Road", "Super Bell Subway", "Big Blue",
+		  "Paris Promenade", "Toad Circuit", "Choco Mountain", "Coconut Mall",
+		  "Tokyo Blur", "Shroom Ridge", "Sky Garden", "Ninja Hideaway",
+		  "New York Minute", "Mario Circuit 3", "Kalamari Desert", "Waluigi Pinball",
+		  "Sydney Sprint", "Snow Land", "Mushroom Gorge", "Sky-High Sundae"]
+usedTracks = []
+currentTrack = ""
+trackReset = 4
+
+def getCurrentSetup():
+	global currentSetup
+	return currentSetup
+
+def getCurrentCharacter():
+	global currentSetup
+	return currentSetup["character"]
+
+def getCurrentKart():
+	global currentSetup
+	return currentSetup["kart"]
+
+def getCurrentTire():
+	global currentSetup
+	return currentSetup["tire"]
+
+def getCurrentGlider():
+	global currentSetup
+	return currentSetup["glider"]
+
+def getCurrentTrack():
+	global currentTrack
+	return currentTrack
+
+def setTrackReset(races):
+	global trackReset
+	trackReset = races
+
 def makeLists(charOpt, kartOpt):
 	global characterList
 	global kartList
@@ -49,6 +98,7 @@ def makeLists(charOpt, kartOpt):
 				kartList = kartList+sportsBikes
 			if kart == 'atvs':
 				kartList = kartList+atvs
+
 def randomize():
 	global previousSetup
 	global currentSetup 
@@ -115,6 +165,20 @@ def randomizeAspect(aspect):
 			currentSetup["glider"] = glider
 			previousSetup["glider"] = glider
 
+def randomizeTrack():
+	global tracks
+	global trackReset
+	global usedTracks
+	global currentTrack
+	track = tracks[random.randint(0, len(tracks)-1)]
+	while track in usedTracks:
+		track = tracks[random.randint(0, len(tracks)-1)]
+	currentTrack = track
+	usedTracks.append(track)
+	trackReset = trackReset - 1
+	if trackReset == 0:
+		usedTracks = []
+
 def main():
 	makeLists([],[])
 	userInput = input("Enter Command: ")
@@ -135,6 +199,9 @@ def main():
 			case "reroll glider":
 				randomizeAspect("glider")
 				print(currentSetup)
+			case "randomize track":
+				randomizeTrack()
+				print(currentTrack)
 			case _:
 				print("Error Unrecognized Command Try Again")
 		userInput = input("Enter New Command: ")
