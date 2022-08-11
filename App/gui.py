@@ -412,7 +412,7 @@ gui.theme("LightBlue3") # set theme
 # initial calls to main
 makeLists(['Light', 'Medium', 'Heavy'], ['Karts', 'Standard Bikes', 'Sport Bikes', 'ATVs'])
 randomize()
-randomizeTrack()
+randomizeTrack(False)
 
 # get info from backend
 currCharacter = getCurrentCharacter()
@@ -426,7 +426,7 @@ char_icon = get_char_icon(currCharacter)
 kart_icon = get_kart_icon(currKart)
 tire_icon = get_tire_icon(currTire)
 glider_icon = get_glider_icon(currGlider)
-track_icon = get_track_icon(currTrack)
+track_icon1 = get_track_icon(currTrack)
 
 layout = [
     [
@@ -463,18 +463,30 @@ layout = [
         gui.Checkbox("Heavy", default = True, font=('Helvetica', 10), key='-HEAVYCHECK-'),
         gui.Button("Enable all", font=('Helvetica', 10, 'bold'),  key='-ALLSIZECHECK-')
     ],
-    [
-        gui.Text('Tracks'),
-        gui.Image(filename=track_icon, key='track_image'),
-        gui.Button('Reroll', key='-REROLLTRACK-')
-    ],
-    [gui.Button('Generate Track')],
+    [gui.Text('Tracks'),],
+    [gui.Image(filename=track_icon1, key='track_image1'), 
+    gui.Image(filename='', key='track_image2', visible=False), 
+    gui.Image(filename='', key='track_image3', visible=False), 
+    gui.Image(filename='', key='track_image4', visible=False)],
+    [gui.Button('Reroll', key='-REROLLTRACK1-'), 
+    gui.Button('Reroll', key='-REROLLTRACK2-', visible=False),
+    gui.Button('Reroll', key='-REROLLTRACK3-', visible=False), 
+    gui.Button('Reroll', key='-REROLLTRACK4-', visible=False) ],
+    [gui.Image(filename='', key='track_image5', visible=False), 
+    gui.Image(filename='', key='track_image6', visible=False), 
+    gui.Image(filename='', key='track_image7', visible=False), 
+    gui.Image(filename='', key='track_image1', visible=False)],
+    [gui.Button('Reroll', key='-REROLLTRACK5-', visible=False), 
+    gui.Button('Reroll', key='-REROLLTRACK6-', visible=False),
+    gui.Button('Reroll', key='-REROLLTRACK7-', visible=False), 
+    gui.Button('Reroll', key='-REROLLTRACK8-', visible=False)],
+    [gui.Button('Generate Track', key='-GENERATETRACK-')],
 	[gui.Text("Number Of Tracks Before Reset: "), gui.InputText('4',size=(5,1), key="resetInput"), gui.Button('Set Track Reset', key="_setTrackReset_")],
-	[gui.Text("Current number of tracks before rest: "), gui.Text(getTrackReset(), key="track_reset")]
+	[gui.Text("Current number of tracks before reset: "), gui.Text(getTrackReset(), key="track_reset")]
 ]
 
 # Create the Window
-window = gui.Window('Mario Kart 8 Deluxe Randomizer', layout)
+window = gui.Window('Mario Kart 8 Deluxe Randomizer', layout, resizable=True).finalize()
 # Event Loop to process "events" and get the "values" of the inputs
 while True:
     event, values = window.read()
@@ -512,13 +524,23 @@ while True:
         element = window[event]
         window['glider_image'].update(filename=glider_icon)
 
-    if event == '-REROLLTRACK-':
-        randomizeTrack()
+    if event == '-REROLLTRACK1-':
+        randomizeTrack(True)
+        currTrack = getCurrentTrack()
+        track_icon = get_track_icon(currTrack)
+
+        element = window[event]
+        window['track_image1'].update(filename=track_icon)
+
+    if event == '-GENERATETRACK-':
+        numberOfTracks = int(gui.popup_get_text('Enter the number of tracks you would like to generate: ', keep_on_top=True))
+        randomizeTrack(False)
         currTrack = getCurrentTrack()
         track_icon = get_track_icon(currTrack)
 
         element = window[event]
         window['track_image'].update(filename=track_icon)
+        window['track_reset'].update(getTrackReset())
 
     if event == '-GENLOADOUT-':
         type_array = [
@@ -569,8 +591,9 @@ while True:
         window['-LIGHTCHECK-'].update(True)
         window['-MEDCHECK-'].update(True)
         window['-HEAVYCHECK-'].update(True)
+    
     if event == "_setTrackReset_":
-        setTrackReset(values["resetInput"])
+        setTrackReset(int(values["resetInput"]))
         window['track_reset'].update(getTrackReset())
 
     print('End of app')
