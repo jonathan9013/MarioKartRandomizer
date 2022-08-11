@@ -261,11 +261,13 @@ gui.theme("LightBlue3") # set theme
 makeLists([], [])
 randomize()
 
+# get info from backend
 currCharacter = getCurrentCharacter()
 currKart = getCurrentKart()
 currTire = getCurrentTire()
 currGlider = getCurrentGlider()
 
+# call case match functions to get correct file paths
 char_icon = get_char_icon(currCharacter)
 kart_icon = get_kart_icon(currKart)
 tire_icon = get_tire_icon(currTire)
@@ -275,29 +277,30 @@ track_icon = 'app\media\\tracks\MK8_Rainbow_Road_Course_Icon.png'
 layout = [
     [
         gui.Text('Character'),
-        gui.Image(filename=char_icon),
-        gui.Button('Reroll')
+        gui.Image(filename=char_icon, key='char_image'),
+        gui.Button('Reroll', key='-REROLLCHAR-')
     ],
     [
         gui.Text('Kart'),
-        gui.Image(filename=kart_icon),
-        gui.Button('Reroll')
+        gui.Image(filename=kart_icon, key='kart_image'),
+        gui.Button('Reroll', key='-REROLLKART-')
     ],
     [
         gui.Text('Tire'),
-        gui.Image(filename=tire_icon),
-        gui.Button('Reroll')
+        gui.Image(filename=tire_icon, key='tire_image'),
+        gui.Button('Reroll', key='-REROLLTIRE-')
     ],
     [
         gui.Text('Glider'),
-        gui.Image(filename=glider_icon),
-        gui.Button('Reroll')
+        gui.Image(filename=glider_icon, key='glider_image'),
+        gui.Button('Reroll', key='-REROLLGLIDER-')
     ],
     [gui.Button('Generate')],
     [
         gui.Checkbox("Karts", default = True, font=('Helvetica', 10)),
         gui.Checkbox("Standard Bikes", default = True, font=('Helvetica', 10)),
         gui.Checkbox("Sport Bikes", default = True, font=('Helvetica', 10)),
+        gui.Checkbox("ATVs", default = True, font=('Helvetica', 10)),
         gui.Checkbox("Enable all", default = True, font=('Helvetica', 10, 'bold'))
     ],
     [
@@ -308,8 +311,8 @@ layout = [
     ],
     [
         gui.Text('Tracks'),
-        gui.Image(filename=track_icon),
-        gui.Button('Reroll')
+        gui.Image(filename=track_icon, key='track_image'),
+        gui.Button('Reroll', key='-REROLLTRACK-')
     ],
     [gui.Button('Generate Track')],
 ]
@@ -321,8 +324,42 @@ while True:
     event, values = window.read()
     if event == gui.WIN_CLOSED or event == 'Cancel': # if user closes window or clicks cancel
         break
+    if event == '-REROLLCHAR-':
+        randomizeAspect("character")
+        currCharacter = getCurrentCharacter()
+        char_icon = get_char_icon(currCharacter)
+
+        element = window[event]
+        window['char_image'].update(filename=char_icon)
+    if event == '-REROLLKART-':
+        randomizeAspect("kart")
+        currKart = getCurrentKart()
+        kart_icon = get_kart_icon(currKart)
+
+        element = window[event]
+        window['kart_image'].update(filename=kart_icon)
+    if event == '-REROLLTIRE-':
+        randomizeAspect("tires")
+        currTire = getCurrentTire()
+        tire_icon = get_tire_icon(currTire)
+
+        element = window[event]
+        window['tire_image'].update(filename=tire_icon)
+    if event == '-REROLLGLIDER-':
+        randomizeAspect("glider")
+        currGlider = getCurrentGlider()
+        glider_icon = get_glider_icon(currGlider)
+
+        element = window[event]
+        window['glider_image'].update(filename=glider_icon)
+    if event == '-REROLLTRACK-':
+        randomizeTrack()
+        currTrack = getCurrentTrack()
+        # track_icon = get_track_icon(currTrack)
+
+        element = window[event]
+        window['track_image'].update(filename=track_icon)
 
     # TODO - add reroll button logic here
-    print('End of app')
 
 window.close()
