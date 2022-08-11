@@ -1,4 +1,3 @@
-from cgitb import text
 import PySimpleGUI as gui
 from main import *
 
