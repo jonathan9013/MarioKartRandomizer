@@ -107,29 +107,28 @@ def randomize():
 	global tires
 	global gliders
 
+	if currentSetup["character"] != "":
+		previousSetup = currentSetup.copy()
+	
 	character = characterList[random.randint(0, len(characterList)-1)]
 	while character == previousSetup["character"]:
 		character = characterList[random.randint(0, len(characterList)-1)]
 	currentSetup["character"] = character
-	previousSetup["character"] = character
 	
 	kart = kartList[random.randint(0, len(kartList)-1)]
 	while kart == previousSetup["kart"]:
 		kart = kartList[random.randint(0, len(kartList)-1)]
 	currentSetup["kart"] = kart
-	previousSetup["kart"] = kart
 
 	tire = tires[random.randint(0, len(tires)-1)]
 	while tire == previousSetup["tire"]:
 		tire = tires[random.randint(0, len(tires)-1)]
 	currentSetup["tire"] = tire
-	previousSetup["tire"] = tire
 
 	glider = gliders[random.randint(0, len(gliders)-1)]
 	while glider == previousSetup["glider"]:
 		glider = gliders[random.randint(0, len(gliders)-1)]
 	currentSetup["glider"] = glider
-	previousSetup["glider"] = glider
 
 def randomizeAspect(aspect):
 	global previousSetup
@@ -185,7 +184,14 @@ def randomizeTrack():
 # 	while userInput != 'exit':
 # 		match userInput:
 # 			case "randomize":
+# 				print("Previous setup: ")
+# 				print(previousSetup)
+# 				print("Current setup: ")
+# 				print(currentSetup)
 # 				randomize()
+# 				print("Previous setup: ")
+# 				print(previousSetup)
+# 				print("Current setup: ")
 # 				print(currentSetup)
 # 			case "reroll character":
 # 				randomizeAspect("character")
