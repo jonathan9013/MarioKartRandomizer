@@ -24,13 +24,13 @@ currentSetup =  {"character": "",
 				 "glider": ""}
 
 tracks = ["Mario Kart Stadium", "Water Park", "Sweet Sweet Canyon", "Thwomp Ruins",
-		  "Mario Circuit (Flower Cup)", "Toad Harbor", "Twisted Mansion", "Shy Guy Falls", 
-		  "Sunshine Airport", "Dolphin Shoals", "Electrodome", "Mount Wario", 
-		  "Cloudtop Cruise", "Bone-Dry Dunes", "Bowser's Castle", "Rainbow Road (Special Cup)", 
-		  "Yoshi Circuit", "Excitebike Arena", "Dragon Driftway", "Mute City", 
-		  "Baby Park", "Cheese Land", "Wild Woods", "Animal Crossing", 
-		  "Moo Moo Meadows", "Mario Circuit (Shell Cup)", "Cheep Cheep Beach", "Toad's Turnpike", 
-		  "Dry Dry Desert", "Donut Plains 3", "Royal Raceway", "DK Jungle", 
+		  "Mario Circuit (Flower Cup)", "Toad Harbor", "Twisted Mansion", "Shy Guy Falls",
+		  "Sunshine Airport", "Dolphin Shoals", "Electrodome", "Mount Wario",
+		  "Cloudtop Cruise", "Bone-Dry Dunes", "Bowser's Castle", "Rainbow Road (Special Cup)",
+		  "Yoshi Circuit", "Excitebike Arena", "Dragon Driftway", "Mute City",
+		  "Baby Park", "Cheese Land", "Wild Woods", "Animal Crossing",
+		  "Moo Moo Meadows", "Mario Circuit (Shell Cup)", "Cheep Cheep Beach", "Toad's Turnpike",
+		  "Dry Dry Desert", "Donut Plains 3", "Royal Raceway", "DK Jungle",
 		  "Wario Stadium", "Sherbert Land", "Music Park", "Yoshi Valley",
 		  "Tick-Tock Clock", "Piranha Plant Slide", "Grumble Volcano", "Rainbow Road (Lightning Cup)",
 		  "Wario's Gold Mine", "Rainbow Road (Triforce Cup)", "Ice Ice Outpost", "Hyrule Circuit",
@@ -80,28 +80,22 @@ def makeLists(charOpt, kartOpt):
 	global kartList
 	characterList = []
 	kartList= []
-	if charOpt == []:
-		characterList = lightCharacters+mediumCharacters+heavyCharacters
-	else:
-		for opt in charOpt:
-			if opt == 'light':
-				characterList = characterList+lightCharacters
-			if opt == 'medium':
-				characterList = characterList+mediumCharacters
-			if opt == 'heavy':
-				characterList = characterList+heavyCharacters
-	if kartOpt == []:
-		kartList = karts+bikes+sportsBikes+atvs
-	else:
-		for kart in kartOpt:
-			if kart == 'karts':
-				kartList = kartList+karts
-			if kart == 'bikes':
-				kartList = kartList+bikes
-			if kart == 'sport bikes':
-				kartList = kartList+sportsBikes
-			if kart == 'atvs':
-				kartList = kartList+atvs
+	for opt in charOpt:
+		if opt == 'Light':
+			characterList = characterList+lightCharacters
+		if opt == 'Medium':
+			characterList = characterList+mediumCharacters
+		if opt == 'Heavy':
+			characterList = characterList+heavyCharacters
+	for kart in kartOpt:
+		if kart == 'Karts':
+			kartList = kartList+karts
+		if kart == 'Standard Bikes':
+			kartList = kartList+bikes
+		if kart == 'Sport Bikes':
+			kartList = kartList+sportsBikes
+		if kart == 'ATVs':
+			kartList = kartList+atvs
 
 def randomize():
 	global previousSetup

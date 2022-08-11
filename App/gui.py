@@ -385,19 +385,43 @@ def get_track_icon(currTrack):
 			return "app\media\\tracks\MK8D_Wii_Coconut_Mall_Course_Icon.png"
 		case "Mushroom Gorge":
 			return "app\media\\tracks\MK8D_Wii_Mushroom_Gorge_Course_Icon.png"
-		
+
+def check_valid(type_array, size_array):
+    kart_exists = False
+    size_exists = False
+    karts = []
+    sizes = []
+
+    for element, flag in type_array:
+        if flag == True:
+            kart_exists = True
+            karts.append(element)
+
+    for element, flag in size_array:
+        if flag == True:
+            size_exists = True
+            sizes.append(element)
+
+    if kart_exists and size_exists:
+        return True, sizes, karts
+    else:
+        return False, [], []
+
 gui.theme("LightBlue3") # set theme
 
 # initial calls to main
-makeLists([], [])
+makeLists(['Light', 'Medium', 'Heavy'], ['Karts', 'Standard Bikes', 'Sport Bikes', 'ATVs'])
 randomize()
 randomizeTrack()
+
+# get info from backend
 currCharacter = getCurrentCharacter()
 currTrack = getCurrentTrack()
 currKart = getCurrentKart()
 currTire = getCurrentTire()
 currGlider = getCurrentGlider()
 
+# call case match functions to get correct file paths
 char_icon = get_char_icon(currCharacter)
 kart_icon = get_kart_icon(currKart)
 tire_icon = get_tire_icon(currTire)
@@ -407,41 +431,42 @@ track_icon = get_track_icon(currTrack)
 layout = [
     [
         gui.Text('Character'),
-        gui.Image(filename=char_icon),
-        gui.Button('Reroll')
+        gui.Image(filename=char_icon, key='char_image'),
+        gui.Button('Reroll', key='-REROLLCHAR-')
     ],
     [
         gui.Text('Kart'),
-        gui.Image(filename=kart_icon),
-        gui.Button('Reroll')
+        gui.Image(filename=kart_icon, key='kart_image'),
+        gui.Button('Reroll', key='-REROLLKART-')
     ],
     [
         gui.Text('Tire'),
-        gui.Image(filename=tire_icon),
-        gui.Button('Reroll')
+        gui.Image(filename=tire_icon, key='tire_image'),
+        gui.Button('Reroll', key='-REROLLTIRE-')
     ],
     [
         gui.Text('Glider'),
-        gui.Image(filename=glider_icon),
-        gui.Button('Reroll')
+        gui.Image(filename=glider_icon, key='glider_image'),
+        gui.Button('Reroll', key='-REROLLGLIDER-')
     ],
-    [gui.Button('Generate')],
+    [gui.Button('Generate', key='-GENLOADOUT-')],
     [
-        gui.Checkbox("Karts", default = True, font=('Helvetica', 10)),
-        gui.Checkbox("Standard Bikes", default = True, font=('Helvetica', 10)),
-        gui.Checkbox("Sport Bikes", default = True, font=('Helvetica', 10)),
-        gui.Checkbox("Enable all", default = True, font=('Helvetica', 10, 'bold'))
+        gui.Checkbox("Karts", default = True, font=('Helvetica', 10), key='-KARTCHECK-'),
+        gui.Checkbox("Standard Bikes", default = True, font=('Helvetica', 10), key='-BIKECHECK-'),
+        gui.Checkbox("Sport Bikes", default = True, font=('Helvetica', 10), key='-SPORTCHECK-'),
+        gui.Checkbox("ATVs", default = True, font=('Helvetica', 10), key='-ATVCHECK-'),
+        gui.Button("Enable all", font=('Helvetica', 10, 'bold'), key='-ALLKARTCHECK-'),
     ],
     [
-        gui.Checkbox("Light", default = True, font=('Helvetica', 10)),
-        gui.Checkbox("Medium", default = True, font=('Helvetica', 10)),
-        gui.Checkbox("Heavy", default = True, font=('Helvetica', 10)),
-        gui.Checkbox("Enable all", default = True, font=('Helvetica', 10, 'bold'))
+        gui.Checkbox("Light", default = True, font=('Helvetica', 10), key='-LIGHTCHECK-'),
+        gui.Checkbox("Medium", default = True, font=('Helvetica', 10), key='-MEDCHECK-'),
+        gui.Checkbox("Heavy", default = True, font=('Helvetica', 10), key='-HEAVYCHECK-'),
+        gui.Button("Enable all", font=('Helvetica', 10, 'bold'),  key='-ALLSIZECHECK-')
     ],
     [
         gui.Text('Tracks'),
-        gui.Image(filename=track_icon),
-        gui.Button('Reroll')
+        gui.Image(filename=track_icon, key='track_image'),
+        gui.Button('Reroll', key='-REROLLTRACK-')
     ],
     [gui.Button('Generate Track')],
 	[gui.Text("Number Of Tracks Before Reset: "), gui.InputText('4',size=(5,1), key="resetInput"), gui.Button('Set Track Reset', key="_setTrackReset_")],
@@ -455,10 +480,99 @@ while True:
     event, values = window.read()
     if event == gui.WIN_CLOSED or event == 'Cancel': # if user closes window or clicks cancel
         break
+    if event == '-REROLLCHAR-':
+        randomizeAspect("character")
+        currCharacter = getCurrentCharacter()
+        char_icon = get_char_icon(currCharacter)
+
+        element = window[event]
+        window['char_image'].update(filename=char_icon)
+
+    if event == '-REROLLKART-':
+        randomizeAspect("kart")
+        currKart = getCurrentKart()
+        kart_icon = get_kart_icon(currKart)
+
+        element = window[event]
+        window['kart_image'].update(filename=kart_icon)
+
+    if event == '-REROLLTIRE-':
+        randomizeAspect("tires")
+        currTire = getCurrentTire()
+        tire_icon = get_tire_icon(currTire)
+
+        element = window[event]
+        window['tire_image'].update(filename=tire_icon)
+
+    if event == '-REROLLGLIDER-':
+        randomizeAspect("glider")
+        currGlider = getCurrentGlider()
+        glider_icon = get_glider_icon(currGlider)
+
+        element = window[event]
+        window['glider_image'].update(filename=glider_icon)
+
+    if event == '-REROLLTRACK-':
+        randomizeTrack()
+        currTrack = getCurrentTrack()
+        track_icon = get_track_icon(currTrack)
+
+        element = window[event]
+        window['track_image'].update(filename=track_icon)
+
+    if event == '-GENLOADOUT-':
+        type_array = [
+                (window['-KARTCHECK-'].Text, values["-KARTCHECK-"]),
+                (window['-BIKECHECK-'].Text, values["-BIKECHECK-"]),
+                (window['-SPORTCHECK-'].Text, values["-SPORTCHECK-"]),
+                (window['-ATVCHECK-'].Text, values["-ATVCHECK-"])
+            ]
+        size_array = [
+                (window['-LIGHTCHECK-'].Text, values["-LIGHTCHECK-"]),
+                (window['-MEDCHECK-'].Text, values["-MEDCHECK-"]),
+                (window['-HEAVYCHECK-'].Text, values["-HEAVYCHECK-"])
+            ]
+
+        flag, size_array, type_array = check_valid(type_array, size_array)
+
+        if(not flag):
+            gui.Popup('Select at least 1 kart and 1 character type.', keep_on_top=True)
+        else:
+            makeLists(size_array, type_array)
+
+            randomize()
+
+            currCharacter = getCurrentCharacter()
+            char_icon = get_char_icon(currCharacter)
+
+            currKart = getCurrentKart()
+            kart_icon = get_kart_icon(currKart)
+
+            currTire = getCurrentTire()
+            tire_icon = get_tire_icon(currTire)
+
+            currGlider = getCurrentGlider()
+            glider_icon = get_glider_icon(currGlider)
+
+            window['char_image'].update(filename=char_icon)
+            window['kart_image'].update(filename=kart_icon)
+            window['tire_image'].update(filename=tire_icon)
+            window['glider_image'].update(filename=glider_icon)
+
+    if event == '-ALLKARTCHECK-':
+        window['-KARTCHECK-'].update(True)
+        window['-BIKECHECK-'].update(True)
+        window['-SPORTCHECK-'].update(True)
+        window['-ATVCHECK-'].update(True)
+
+    if event == '-ALLSIZECHECK-':
+        window['-LIGHTCHECK-'].update(True)
+        window['-MEDCHECK-'].update(True)
+        window['-HEAVYCHECK-'].update(True)
     if event == "_setTrackReset_":
         setTrackReset(values["resetInput"])
         window['track_reset'].update(getTrackReset())
-        
+
     print('End of app')
 
 window.close()
