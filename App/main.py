@@ -67,6 +67,10 @@ def getCurrentTrack():
 	global currentTrack
 	return currentTrack
 
+def getTrackReset():
+	global trackReset
+	return trackReset
+
 def setTrackReset(races):
 	global trackReset
 	trackReset = races

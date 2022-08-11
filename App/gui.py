@@ -468,6 +468,9 @@ layout = [
         gui.Image(filename=track_icon, key='track_image'),
         gui.Button('Reroll', key='-REROLLTRACK-')
     ],
+    [gui.Button('Generate Track')],
+	[gui.Text("Number Of Tracks Before Reset: "), gui.InputText('4',size=(5,1), key="resetInput"), gui.Button('Set Track Reset', key="_setTrackReset_")],
+	[gui.Text("Current number of tracks before rest: "), gui.Text(getTrackReset(), key="track_reset")]
 ]
 
 # Create the Window
@@ -566,5 +569,10 @@ while True:
         window['-LIGHTCHECK-'].update(True)
         window['-MEDCHECK-'].update(True)
         window['-HEAVYCHECK-'].update(True)
+    if event == "_setTrackReset_":
+        setTrackReset(values["resetInput"])
+        window['track_reset'].update(getTrackReset())
+
+    print('End of app')
 
 window.close()
