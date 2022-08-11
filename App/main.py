@@ -162,7 +162,7 @@ def randomizeAspect(aspect):
 			currentSetup["glider"] = glider
 			previousSetup["glider"] = glider
 
-def randomizeTrack():
+def randomizeTrack(reroll):
 	global tracks
 	global trackReset
 	global usedTracks
@@ -171,10 +171,12 @@ def randomizeTrack():
 	while track in usedTracks:
 		track = tracks[random.randint(0, len(tracks)-1)]
 	currentTrack = track
-	usedTracks.append(track)
-	trackReset = trackReset - 1
-	if trackReset == 0:
-		usedTracks = []
+	if not reroll:
+		usedTracks.append(track)
+		trackReset = trackReset - 1
+		if trackReset == 0:
+			usedTracks = []
+			trackReset = 4
 
 # def main():
 # 	makeLists([],[])
