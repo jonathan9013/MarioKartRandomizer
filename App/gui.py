@@ -428,7 +428,7 @@ tire_icon = get_tire_icon(currTire)
 glider_icon = get_glider_icon(currGlider)
 track_icon = get_track_icon(currTrack)
 
-layout = [
+left_column = [
     [
         gui.Text('Character'),
         gui.Image(filename=char_icon, key='char_image'),
@@ -463,18 +463,36 @@ layout = [
         gui.Checkbox("Heavy", default = True, font=('Helvetica', 10), key='-HEAVYCHECK-'),
         gui.Button("Enable all", font=('Helvetica', 10, 'bold'),  key='-ALLSIZECHECK-')
     ],
+]
+right_column = [
     [
         gui.Text('Tracks'),
         gui.Image(filename=track_icon, key='track_image'),
         gui.Button('Reroll', key='-REROLLTRACK-')
     ],
     [gui.Button('Generate Track')],
-	[gui.Text("Number Of Tracks Before Reset: "), gui.InputText('4',size=(5,1), key="resetInput"), gui.Button('Set Track Reset', key="_setTrackReset_")],
-	[gui.Text("Current number of tracks before rest: "), gui.Text(getTrackReset(), key="track_reset")]
+	[
+        gui.Text("Number Of Tracks Before Reset: "),
+        gui.InputText('4',size=(5,1), key="resetInput"),
+        gui.Button('Set Track Reset', key="_setTrackReset_")
+    ],
+	[
+        gui.Text("Current number of tracks before rest: "),
+        gui.Text(getTrackReset(), key="track_reset")
+    ],
+]
+
+layout = [
+    [
+        gui.Column(left_column),
+        gui.VSeparator(),
+        gui.Column(right_column)
+    ],
 ]
 
 # Create the Window
-window = gui.Window('Mario Kart 8 Deluxe Randomizer', layout)
+window = gui.Window('Mario Kart 8 Deluxe Randomizer', layout, resizable=True).Finalize()
+
 # Event Loop to process "events" and get the "values" of the inputs
 while True:
     event, values = window.read()
@@ -569,6 +587,7 @@ while True:
         window['-LIGHTCHECK-'].update(True)
         window['-MEDCHECK-'].update(True)
         window['-HEAVYCHECK-'].update(True)
+
     if event == "_setTrackReset_":
         setTrackReset(values["resetInput"])
         window['track_reset'].update(getTrackReset())
