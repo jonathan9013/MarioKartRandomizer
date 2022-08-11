@@ -466,43 +466,30 @@ left_column = [
 ]
 right_column = [
     [
-        [gui.Text('Tracks')],
-        [
-            gui.Image(filename=track_icon1, key='track_image1'),
-            gui.Image(filename='', key='track_image2', visible=False),
-            gui.Image(filename='', key='track_image3', visible=False),
-            gui.Image(filename='', key='track_image4', visible=False)
-        ],
-        [
-            gui.Button('Reroll', key='-REROLLTRACK1-'),
-            gui.Button('Reroll', key='-REROLLTRACK2-', visible=False),
-            gui.Button('Reroll', key='-REROLLTRACK3-', visible=False),
-            gui.Button('Reroll', key='-REROLLTRACK4-', visible=False)
-        ],
-        [
-            gui.Image(filename='', key='track_image5', visible=False),
-            gui.Image(filename='', key='track_image6', visible=False),
-            gui.Image(filename='', key='track_image7', visible=False),
-            gui.Image(filename='', key='track_image1', visible=False)
-        ],
-        [
-            gui.Button('Reroll', key='-REROLLTRACK5-', visible=False),
-            gui.Button('Reroll', key='-REROLLTRACK6-', visible=False),
-            gui.Button('Reroll', key='-REROLLTRACK7-', visible=False),
-            gui.Button('Reroll', key='-REROLLTRACK8-', visible=False)
-        ],
-        [gui.Button('Generate Track', key='-GENERATETRACK-')],
-        [
-            gui.Text("Number Of Tracks Before Reset: "),
-            gui.InputText('4',size=(5,1), key="resetInput"),
-            gui.Button('Set Track Reset', key="_setTrackReset_")
-        ],
-        [
-            gui.Text("Current number of tracks before reset: "),
-            gui.Text(getTrackReset(), key="track_reset")
-        ]
+        gui.Image(filename=track_icon1, key='track_image1'),
+        gui.Image(filename='', key='track_image2', visible=False),
+        gui.Image(filename='', key='track_image3', visible=False),
+        gui.Image(filename='', key='track_image4', visible=False)
     ],
-    [gui.Button('Generate Track')],
+    [
+        gui.Button('Reroll', key='-REROLLTRACK1-'),
+        gui.Button('Reroll', key='-REROLLTRACK2-', visible=False),
+        gui.Button('Reroll', key='-REROLLTRACK3-', visible=False),
+        gui.Button('Reroll', key='-REROLLTRACK4-', visible=False)
+    ],
+    [
+        gui.Image(filename='', key='track_image5', visible=False),
+        gui.Image(filename='', key='track_image6', visible=False),
+        gui.Image(filename='', key='track_image7', visible=False),
+        gui.Image(filename='', key='track_image1', visible=False)
+    ],
+    [
+        gui.Button('Reroll', key='-REROLLTRACK5-', visible=False),
+        gui.Button('Reroll', key='-REROLLTRACK6-', visible=False),
+        gui.Button('Reroll', key='-REROLLTRACK7-', visible=False),
+        gui.Button('Reroll', key='-REROLLTRACK8-', visible=False)
+    ],
+    [gui.Button('Generate Track', key='-GENERATETRACK-')],
 	[
         gui.Text("Number Of Tracks Before Reset: "),
         gui.InputText('4',size=(5,1), key="resetInput"),
@@ -525,8 +512,6 @@ layout = [
 # Create the Window
 window = gui.Window('Mario Kart 8 Deluxe Randomizer', layout, resizable=True).Finalize()
 
-# Create the Window
-window = gui.Window('Mario Kart 8 Deluxe Randomizer', layout, resizable=True).finalize()
 # Event Loop to process "events" and get the "values" of the inputs
 while True:
     event, values = window.read()
@@ -579,7 +564,7 @@ while True:
         track_icon = get_track_icon(currTrack)
 
         element = window[event]
-        window['track_image'].update(filename=track_icon)
+        window['track_image1'].update(filename=track_icon)
         window['track_reset'].update(getTrackReset())
 
     if event == '-GENLOADOUT-':
@@ -635,7 +620,5 @@ while True:
     if event == "_setTrackReset_":
         setTrackReset(int(values["resetInput"]))
         window['track_reset'].update(getTrackReset())
-
-    print('End of app')
 
 window.close()
