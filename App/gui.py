@@ -444,6 +444,8 @@ layout = [
         gui.Button('Reroll')
     ],
     [gui.Button('Generate Track')],
+	[gui.Text("Number Of Tracks Before Reset: "), gui.InputText('4',size=(5,1), key="resetInput"), gui.Button('Set Track Reset', key="_setTrackReset_")],
+	[gui.Text("Current number of tracks before rest: "), gui.Text(getTrackReset(), key="track_reset")]
 ]
 
 # Create the Window
@@ -453,8 +455,10 @@ while True:
     event, values = window.read()
     if event == gui.WIN_CLOSED or event == 'Cancel': # if user closes window or clicks cancel
         break
-
-    # TODO - add reroll button logic here
+    if event == "_setTrackReset_":
+        setTrackReset(values["resetInput"])
+        window['track_reset'].update(getTrackReset())
+        
     print('End of app')
 
 window.close()
