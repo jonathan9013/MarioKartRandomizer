@@ -4,7 +4,7 @@ mediumCharacters = ["Daisy", "Peach", "Yoshi", "Tanooki Mario", "Cat Peach", "Vi
 heavyCharacters = ["Donkey Kong", "Metal Mario", "Pink Gold Peach", "Rosalina", "Roy", "Waluigi", "Link", "King Boo", "Bowser", "Wario", "Morton", "Dry Bowser"]
 characterList = []
 
-karts = ["Standard Kart", "Pipe Frame", "Mach 8", "Steel Driver", "Cat Cruiser", "Circuit Special", "Tri-Speeder", "Badwagon", "Prancer", "Biddybuggy", "LandShip", "Sneeker", "Sports Coupe", "Gold Standard", "GLA", "W 25 Silver Arrow", "300 SL Roadster", "Blue Falcon", "Tanooki Kart", "B Dasher", "Streetle", "P-Wing", "Koopa Clown"]
+karts = ["Standard Kart", "Pipe Frame", "Mach 8", "Steel Driver", "Cat Cruiser", "Circuit Special", "Tri-Speeder", "Badwagon", "Prancer", "Biddybuggy", "Landship", "Sneeker", "Sports Coupe", "Gold Standard", "GLA", "W 25 Silver Arrow", "300 SL Roadster", "Blue Falcon", "Tanooki Kart", "B Dasher", "Streetle", "P-Wing", "Koopa Clown"]
 bikes = ["Standard Bike", "The Duke", "Flame Rider", "Varmint", "Mr. Scooty", "Master Cycle Zero", "City Tripper"]
 sportsBikes = ["Comet", "Sport Bike", "Jet Bike", "Yoshi Bike", "Master Cycle"]
 atvs = ["Standard ATV", "Wild Wiggler", "Teddy Buggy", "Bone Rattler", "Splat Buggy", "Inkstriker"]
@@ -24,13 +24,13 @@ currentSetup =  {"character": "",
 				 "glider": ""}
 
 tracks = ["Mario Kart Stadium", "Water Park", "Sweet Sweet Canyon", "Thwomp Ruins",
-		  "Mario Circuit", "Toad Harbor", "Twisted Mansion", "Shy Guy Falls", 
-		  "Sunshine Airport", "Dolphin Shoals", "Electrodome", "Mount Wario", 
-		  "Cloudtop Cruise", "Bone-Dry Dunes", "Bowser's Castle", "Rainbow Road (Special Cup)", 
-		  "Yoshi Circuit", "Excitebike Arena", "Dragon Driftway", "Mute City", 
-		  "Baby Park", "Cheese Land", "Wild Woods", "Animal Crossing", 
-		  "Moo Moo Meadows", "Mario Circuit", "Cheep Cheep Beach", "Toad's Turnpike", 
-		  "Dry Dry Desert", "Donut Plains 3", "Royal Raceway", "DK Jungle", 
+		  "Mario Circuit (Flower Cup)", "Toad Harbor", "Twisted Mansion", "Shy Guy Falls",
+		  "Sunshine Airport", "Dolphin Shoals", "Electrodome", "Mount Wario",
+		  "Cloudtop Cruise", "Bone-Dry Dunes", "Bowser's Castle", "Rainbow Road (Special Cup)",
+		  "Yoshi Circuit", "Excitebike Arena", "Dragon Driftway", "Mute City",
+		  "Baby Park", "Cheese Land", "Wild Woods", "Animal Crossing",
+		  "Moo Moo Meadows", "Mario Circuit (Shell Cup)", "Cheep Cheep Beach", "Toad's Turnpike",
+		  "Dry Dry Desert", "Donut Plains 3", "Royal Raceway", "DK Jungle",
 		  "Wario Stadium", "Sherbert Land", "Music Park", "Yoshi Valley",
 		  "Tick-Tock Clock", "Piranha Plant Slide", "Grumble Volcano", "Rainbow Road (Lightning Cup)",
 		  "Wario's Gold Mine", "Rainbow Road (Triforce Cup)", "Ice Ice Outpost", "Hyrule Circuit",
@@ -67,8 +67,14 @@ def getCurrentTrack():
 	global currentTrack
 	return currentTrack
 
+def getTrackReset():
+	global trackReset
+	return trackReset
+
 def setTrackReset(races):
 	global trackReset
+	global usedTracks
+	usedTracks =[]
 	trackReset = races
 
 def makeLists(charOpt, kartOpt):
@@ -76,32 +82,26 @@ def makeLists(charOpt, kartOpt):
 	global kartList
 	characterList = []
 	kartList= []
-	if charOpt == []:
-		characterList = lightCharacters+mediumCharacters+heavyCharacters
-	else:
-		for opt in charOpt:
-			if opt == 'light':
-				characterList = characterList+lightCharacters
-			if opt == 'medium':
-				characterList = characterList+mediumCharacters
-			if opt == 'heavy':
-				characterList = characterList+heavyCharacters
-	if kartOpt == []:
-		kartList = karts+bikes+sportsBikes+atvs
-	else:
-		for kart in kartOpt:
-			if kart == 'karts':
-				kartList = kartList+karts
-			if kart == 'bikes':
-				kartList = kartList+bikes
-			if kart == 'sport bikes':
-				kartList = kartList+sportsBikes
-			if kart == 'atvs':
-				kartList = kartList+atvs
+	for opt in charOpt:
+		if opt == 'Light':
+			characterList = characterList+lightCharacters
+		if opt == 'Medium':
+			characterList = characterList+mediumCharacters
+		if opt == 'Heavy':
+			characterList = characterList+heavyCharacters
+	for kart in kartOpt:
+		if kart == 'Karts':
+			kartList = kartList+karts
+		if kart == 'Standard Bikes':
+			kartList = kartList+bikes
+		if kart == 'Sport Bikes':
+			kartList = kartList+sportsBikes
+		if kart == 'ATVs':
+			kartList = kartList+atvs
 
 def randomize():
 	global previousSetup
-	global currentSetup 
+	global currentSetup
 	global characterList
 	global kartList
 	global tires
@@ -109,12 +109,12 @@ def randomize():
 
 	if currentSetup["character"] != "":
 		previousSetup = currentSetup.copy()
-	
+
 	character = characterList[random.randint(0, len(characterList)-1)]
 	while character == previousSetup["character"]:
 		character = characterList[random.randint(0, len(characterList)-1)]
 	currentSetup["character"] = character
-	
+
 	kart = kartList[random.randint(0, len(kartList)-1)]
 	while kart == previousSetup["kart"]:
 		kart = kartList[random.randint(0, len(kartList)-1)]
@@ -132,7 +132,7 @@ def randomize():
 
 def randomizeAspect(aspect):
 	global previousSetup
-	global currentSetup 
+	global currentSetup
 	global characterList
 	global kartList
 	global tires
@@ -164,7 +164,7 @@ def randomizeAspect(aspect):
 			currentSetup["glider"] = glider
 			previousSetup["glider"] = glider
 
-def randomizeTrack():
+def randomizeTrack(reroll):
 	global tracks
 	global trackReset
 	global usedTracks
@@ -173,10 +173,13 @@ def randomizeTrack():
 	while track in usedTracks:
 		track = tracks[random.randint(0, len(tracks)-1)]
 	currentTrack = track
+	if not reroll:
+		trackReset = trackReset - 1
+		if trackReset == 0:
+			usedTracks = []
+			trackReset = 4
 	usedTracks.append(track)
-	trackReset = trackReset - 1
-	if trackReset == 0:
-		usedTracks = []
+		
 
 # def main():
 # 	makeLists([],[])
