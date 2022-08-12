@@ -1,3 +1,4 @@
+from tkinter import TOP
 import PySimpleGUI as gui
 from main import *
 
@@ -427,90 +428,135 @@ kart_icon = get_kart_icon(currKart)
 tire_icon = get_tire_icon(currTire)
 glider_icon = get_glider_icon(currGlider)
 track_icon1 = get_track_icon(currTrack)
+cup_icon = 'app\media\cups\MK8D_BCP_Golden_Dash_Emblem.png' # TODO - get icon from backend
 
 left_column = [
     [
-        gui.Text('Character'),
-        gui.Image(filename=char_icon, key='char_image'),
-        gui.Button('Reroll', key='-REROLLCHAR-')
+        gui.Button(key='-REROLLCHAR-', image_filename=r'app\media\refresh_icon.png', border_width=0, button_color='#a8cfdd', mouseover_colors='#a8cfdd', pad=((10,5),(3,3))),
+        gui.Image(filename=char_icon, key='char_image', pad=((56,35),(10,10))),
+        gui.Text('Character', font=('Helvetica', 12, 'bold')),
     ],
     [
-        gui.Text('Kart'),
-        gui.Image(filename=kart_icon, key='kart_image'),
-        gui.Button('Reroll', key='-REROLLKART-')
+        gui.Button(key='-REROLLKART-', image_filename=r'app\media\refresh_icon.png', border_width=0, button_color='#a8cfdd', mouseover_colors='#a8cfdd', pad=((10, 5),(3, 3))),
+        gui.Image(filename=kart_icon, key='kart_image', pad=((20,15),(10,10))),
+        gui.Text('Kart', font=('Helvetica', 12, 'bold')),
     ],
     [
-        gui.Text('Tire'),
-        gui.Image(filename=tire_icon, key='tire_image'),
-        gui.Button('Reroll', key='-REROLLTIRE-')
+        gui.Button(key='-REROLLTIRE-', image_filename=r'app\media\refresh_icon.png', border_width=0, button_color='#a8cfdd', mouseover_colors='#a8cfdd', pad=((10,5),(3,3))),
+        gui.Image(filename=tire_icon, key='tire_image', pad=((20,15),(10,10))),
+        gui.Text('Tire', font=('Helvetica', 12, 'bold')),
     ],
     [
-        gui.Text('Glider'),
-        gui.Image(filename=glider_icon, key='glider_image'),
-        gui.Button('Reroll', key='-REROLLGLIDER-')
+        gui.Button(key='-REROLLGLIDER-', image_filename=r'app\media\refresh_icon.png', border_width=0, button_color='#a8cfdd', mouseover_colors='#a8cfdd', pad=((10,5),(3,3))),
+        gui.Image(filename=glider_icon, key='glider_image', pad=((20,15),(10,10))),
+        gui.Text('Glider', font=('Helvetica', 12, 'bold')),
     ],
-    [gui.Button('Generate', key='-GENLOADOUT-')],
+    [gui.Button('Generate Loadout', key='-GENLOADOUT-', mouseover_colors='#183440', pad=((10,5),(20,20)))],
     [
         gui.Checkbox("Karts", default = True, font=('Helvetica', 10), key='-KARTCHECK-'),
         gui.Checkbox("Standard Bikes", default = True, font=('Helvetica', 10), key='-BIKECHECK-'),
         gui.Checkbox("Sport Bikes", default = True, font=('Helvetica', 10), key='-SPORTCHECK-'),
         gui.Checkbox("ATVs", default = True, font=('Helvetica', 10), key='-ATVCHECK-'),
-        gui.Button("Enable all", font=('Helvetica', 10, 'bold'), key='-ALLKARTCHECK-'),
+        gui.Button("Enable all", font=('Helvetica', 10), key='-ALLKARTCHECK-', mouseover_colors='#183440'),
     ],
     [
         gui.Checkbox("Light", default = True, font=('Helvetica', 10), key='-LIGHTCHECK-'),
         gui.Checkbox("Medium", default = True, font=('Helvetica', 10), key='-MEDCHECK-'),
         gui.Checkbox("Heavy", default = True, font=('Helvetica', 10), key='-HEAVYCHECK-'),
-        gui.Button("Enable all", font=('Helvetica', 10, 'bold'),  key='-ALLSIZECHECK-')
+        gui.Button("Enable all", font=('Helvetica', 10),  key='-ALLSIZECHECK-', mouseover_colors='#183440')
     ],
 ]
+
 right_column = [
+    # first row of tracks
     [
-        gui.Image(filename=track_icon1, key='track_image1'),
-        gui.Image(filename='', key='track_image2', visible=False),
-        gui.Image(filename='', key='track_image3', visible=False),
-        gui.Image(filename='', key='track_image4', visible=False)
+        gui.Column(
+            layout=[
+                [gui.Image(filename=track_icon1, key='track_image1')], # TODO - change filename
+                [gui.Button(key='-REROLLTRACK1-', image_filename=r'app\media\refresh_icon.png', border_width=0, button_color='#a8cfdd', mouseover_colors='#a8cfdd'), gui.Text("Shell Cup")] # TODO - display track's Cup property here
+            ],
+            pad=((0,20),(5,5))
+        ),
+        gui.Column(
+            layout=[
+                [gui.Image(filename=track_icon1, key='track_image2')], # TODO - change filename
+                [gui.Button(key='-REROLLTRACK2-', image_filename=r'app\media\refresh_icon.png', border_width=0, button_color='#a8cfdd', mouseover_colors='#a8cfdd'), gui.Text("Mushroom Cup")] # TODO - display track's Cup property here
+            ],
+            pad=((0,20),(5,5))
+        ),
+        gui.Column(
+            layout=[
+                [gui.Image(filename=track_icon1, key='track_image3')], # TODO - change filename
+                [gui.Button(key='-REROLLTRACK3-', image_filename=r'app\media\refresh_icon.png', border_width=0, button_color='#a8cfdd', mouseover_colors='#a8cfdd'), gui.Text("Banana Cup")] # TODO - display track's Cup property here
+            ],
+            pad=((0,20),(5,5))
+        ),
+        gui.Column(
+            layout=[
+                [gui.Image(filename=track_icon1, key='track_image4')], # TODO - change filename
+                [gui.Button(key='-REROLLTRACK4-', image_filename=r'app\media\refresh_icon.png', border_width=0, button_color='#a8cfdd', mouseover_colors='#a8cfdd'), gui.Text("Golden Dash Cup")] # TODO - display track's Cup property here
+            ],
+            pad=((0,20),(5,5))
+        ),
     ],
+
+    # second row of tracks
     [
-        gui.Button('Reroll', key='-REROLLTRACK1-'),
-        gui.Button('Reroll', key='-REROLLTRACK2-', visible=False),
-        gui.Button('Reroll', key='-REROLLTRACK3-', visible=False),
-        gui.Button('Reroll', key='-REROLLTRACK4-', visible=False)
+        gui.Column(
+            layout=[
+                [gui.Image(filename=track_icon1, key='track_image5')], # TODO - change filename
+                [gui.Button(key='-REROLLTRACK5-', image_filename=r'app\media\refresh_icon.png', border_width=0, button_color='#a8cfdd', mouseover_colors='#a8cfdd'), gui.Text("Propeller Cup")] # TODO - display track's Cup property here
+            ],
+            pad=((0,20),(5,5))
+        ),
+        gui.Column(
+            layout=[
+                [gui.Image(filename=track_icon1, key='track_image6')], # TODO - change filename
+                [gui.Button(key='-REROLLTRACK6-', image_filename=r'app\media\refresh_icon.png', border_width=0, button_color='#a8cfdd', mouseover_colors='#a8cfdd'), gui.Text("Lightning Cup")] # TODO - display track's Cup property here
+            ],
+            pad=((0,20),(5,5))
+        ),
+        gui.Column(
+            layout=[
+                [gui.Image(filename=track_icon1, key='track_image7')], # TODO - change filename
+                [gui.Button(key='-REROLLTRACK7-', image_filename=r'app\media\refresh_icon.png', border_width=0, button_color='#a8cfdd', mouseover_colors='#a8cfdd'), gui.Text("Leaf Cup")] # TODO - display track's Cup property here
+            ],
+            pad=((0,20),(5,5))
+        ),
+        gui.Column(
+            layout=[
+                [gui.Image(filename=track_icon1, key='track_image8')], # TODO - change filename
+                [gui.Button(key='-REROLLTRACK8-', image_filename=r'app\media\refresh_icon.png', border_width=0, button_color='#a8cfdd', mouseover_colors='#a8cfdd'), gui.Text("Egg Cup")] # TODO - display track's Cup property here
+            ],
+            pad=((0,20),(5,5))
+        ),
     ],
-    [
-        gui.Image(filename='', key='track_image5', visible=False),
-        gui.Image(filename='', key='track_image6', visible=False),
-        gui.Image(filename='', key='track_image7', visible=False),
-        gui.Image(filename='', key='track_image1', visible=False)
-    ],
-    [
-        gui.Button('Reroll', key='-REROLLTRACK5-', visible=False),
-        gui.Button('Reroll', key='-REROLLTRACK6-', visible=False),
-        gui.Button('Reroll', key='-REROLLTRACK7-', visible=False),
-        gui.Button('Reroll', key='-REROLLTRACK8-', visible=False)
-    ],
-    [gui.Button('Generate Track', key='-GENERATETRACK-')],
+    [gui.Button('Generate Track(s)', key='-GENERATETRACK-', mouseover_colors='#183440', pad=((5,5),(20,20)))],
 	[
         gui.Text("Number Of Tracks Before Reset: "),
-        gui.InputText('4',size=(5,1), key="resetInput"),
-        gui.Button('Set Track Reset', key="_setTrackReset_")
+        gui.InputText('4', size=(5,1), key="resetInput"),
+        gui.Button('Apply', key="_setTrackReset_", mouseover_colors='#183440')
     ],
 	[
-        gui.Text("Current number of tracks before rest: "),
+        gui.Text("Current number of tracks before reset:"),
         gui.Text(getTrackReset(), key="track_reset")
+    ],
+    [
+        gui.Image(filename=cup_icon, key='cup_image', pad=((5,15),(30,10))),
+        gui.Button('Generate Cup', key="-GENERATECUP-", mouseover_colors='#183440', pad=((5,5),(30,10)))
     ],
 ]
 
 layout = [
     [
-        gui.Column(left_column),
+        gui.Column(left_column, vertical_alignment=TOP),
         gui.VSeparator(),
-        gui.Column(right_column)
+        gui.Column(right_column, vertical_alignment=TOP)
     ],
 ]
 
 # Create the Window
-window = gui.Window('Mario Kart 8 Deluxe Randomizer', layout, resizable=True).Finalize()
+window = gui.Window('Mario Kart 8 Deluxe Randomizer', layout, resizable=True, icon='App\media\window_icon.ico').Finalize()
 
 # Event Loop to process "events" and get the "values" of the inputs
 while True:
@@ -607,6 +653,10 @@ while True:
             window['kart_image'].update(filename=kart_icon)
             window['tire_image'].update(filename=tire_icon)
             window['glider_image'].update(filename=glider_icon)
+
+    if event == '-GENERATECUP-':
+        # TODO - get updated cup icon from backend
+        window['cup_image'].update(filename=cup_icon)
 
     if event == '-ALLKARTCHECK-':
         window['-KARTCHECK-'].update(True)
