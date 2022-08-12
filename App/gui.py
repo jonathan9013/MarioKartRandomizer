@@ -3,91 +3,7 @@ import PySimpleGUI as gui
 from main import *
 from Track import Track
 from Character import Character
-
-def get_char_icon(currCharacter):
-    match currCharacter:
-        case "Baby Daisy":
-            return "app\media\characters\MK8_BabyDaisy_Icon.png"
-        case "Baby Luigi":
-            return "app\media\characters\MK8_BabyLuigi_Icon.png"
-        case "Baby Mario":
-            return "app\media\characters\MK8_BabyMario_Icon.png"
-        case "Baby Peach":
-            return "app\media\characters\MK8_BabyPeach_Icon.png"
-        case "Baby Rosalina":
-            return "app\media\characters\MK8_BabyRosalina_Icon.png"
-        case "Bowser":
-            return "app\media\characters\MK8_Bowser_Icon.png"
-        case "Bowser Jr.":
-            return "app\media\characters\MK8_Bowser_Jr_Icon.png"
-        case "Cat Peach":
-            return "app\media\characters\MK8_Cat_Peach_Icon.png"
-        case "Daisy":
-            return "app\media\characters\MK8_Daisy_Icon.png"
-        case "Donkey Kong":
-            return "app\media\characters\MK8_DKong_Icon.png"
-        case "Dry Bowser":
-            return "app\media\characters\MK8_Dry_Bowser_Icon.png"
-        case "Iggy":
-            return "app\media\characters\MK8_Iggy_Icon.png"
-        case "Isabelle":
-            return "app\media\characters\MK8_Isabelle_Icon.png"
-        case "Koopa Troopa":
-            return "app\media\characters\MK8_Koopa_Icon.png"
-        case "Lakitu":
-            return "app\media\characters\MK8_Lakitu_Icon.png"
-        case "Larry":
-            return "app\media\characters\MK8_Larry_Icon.png"
-        case "Lemmy":
-            return "app\media\characters\MK8_Lemmy_Icon.png"
-        case "Link":
-            return "app\media\characters\MK8_Link_Icon.png"
-        case "Ludwig":
-            return "app\media\characters\MK8_Ludwig_Icon.png"
-        case "Luigi":
-            return "app\media\characters\MK8_Luigi_Icon.png"
-        case "Mario":
-            return "app\media\characters\MK8_Mario_Icon.png"
-        case "Metal Mario":
-            return "app\media\characters\MK8_MMario_Icon.png"
-        case "Morton":
-            return "app\media\characters\MK8_Morton_Icon.png"
-        case "Peach":
-            return "app\media\characters\MK8_Peach_Icon.png"
-        case "Pink Gold Peach":
-            return "app\media\characters\MK8_PGPeach_Icon.png"
-        case "Rosalina":
-            return "app\media\characters\MK8_Rosalina_Icon.png"
-        case "Roy":
-            return "app\media\characters\MK8_Roy_Icon.png"
-        case "Shy Guy":
-            return "app\media\characters\MK8_ShyGuy_Icon.png"
-        case "Tanooki Mario":
-            return "app\media\characters\MK8_Tanooki_Mario_Icon.png"
-        case "Toad":
-            return "app\media\characters\MK8_Toad_Icon.png"
-        case "Toadette":
-            return "app\media\characters\MK8_Toadette_Icon.png"
-        case "Waluigi":
-            return "app\media\characters\MK8_Waluigi_Icon.png"
-        case "Wario":
-            return "app\media\characters\MK8_Wario_Icon.png"
-        case "Wendy":
-            return "app\media\characters\MK8_Wendy_Icon.png"
-        case "Yoshi":
-            return "app\media\characters\MK8_Yoshi_Icon.png"
-        case "Dry Bones":
-            return "app\media\characters\MK8DX_Dry_Bones_Icon.png"
-        case "Inkling Girl":
-            return "app\media\characters\MK8DX_Female_Inkling_Icon.png"
-        case "King Boo":
-            return "app\media\characters\MK8DX_King_Boo_Icon.png"
-        case "Inkling Boy":
-            return "app\media\characters\MK8DX_Male_Inkling_Icon.png"
-        case "Villager Girl":
-            return "app\media\characters\VillagerFemale-Icon-MK8.png"
-        case "Villager Boy":
-            return "app\media\characters\VillagerMale-Icon-MK8.png"
+from Cup import Cup
 
 def get_kart_icon(currKart):
     match currKart:
@@ -286,6 +202,7 @@ initialize()
 makeLists(['Light', 'Medium', 'Heavy'], ['Karts', 'Standard Bikes', 'Sport Bikes', 'ATVs'])
 randomize()
 randomizeTrack(False)
+randomizeCup()
 
 # get info from backend
 currCharacter = getCurrentCharacter()
@@ -293,6 +210,7 @@ currTrack = getCurrentTrack()
 currKart = getCurrentKart()
 currTire = getCurrentTire()
 currGlider = getCurrentGlider()
+currCup = getCurrentCup()
 
 # call case match functions to get correct file paths
 char_icon = currCharacter.image
@@ -300,7 +218,9 @@ kart_icon = get_kart_icon(currKart)
 tire_icon = get_tire_icon(currTire)
 glider_icon = get_glider_icon(currGlider)
 track_icon1 = currTrack.image
-cup_icon = 'app\media\cups\MK8D_BCP_Golden_Dash_Emblem.png' # TODO - get icon from backend
+cup_icon = currCup.image
+
+track_cup_text1 = currTrack.cup
 
 left_column = [
     [
@@ -345,7 +265,7 @@ right_column = [
         gui.Column(
             layout=[
                 [gui.Image(filename=track_icon1, key='track_image1')], # TODO - change filename
-                [gui.Button(key='-REROLLTRACK1-', image_filename=r'app\media\refresh_icon.png', border_width=0, button_color='#a8cfdd', mouseover_colors='#a8cfdd'), gui.Text("Shell Cup")] # TODO - display track's Cup property here
+                [gui.Button(key='-REROLLTRACK1-', image_filename=r'app\media\refresh_icon.png', border_width=0, button_color='#a8cfdd', mouseover_colors='#a8cfdd'), gui.Text(track_cup_text1, key="track_cup1")] # TODO - display track's Cup property here
             ],
             pad=((0,20),(5,5))
         ),
@@ -471,9 +391,10 @@ while True:
         randomizeTrack(True)
         currTrack = getCurrentTrack()
         track_icon = currTrack.image
+        track_cup_text = currTrack.cup
 
-        element = window[event]
         window['track_image1'].update(filename=track_icon)
+        window['track_cup1'].update(track_cup_text)
 
     if event == '-GENERATETRACK-':
         # numberOfTracks = gui.popup_get_text('Enter the number of tracks you would like to generate: ', keep_on_top=True)
@@ -482,9 +403,10 @@ while True:
         randomizeTrack(False)
         currTrack = getCurrentTrack()
         track_icon = currTrack.image
+        track_cup_text = currTrack.cup
 
-        element = window[event]
         window['track_image1'].update(filename=track_icon)
+        window['track_cup1'].update(track_cup_text)
         window['track_reset'].update(getTrackReset())
 
     if event == '-GENLOADOUT-':
@@ -527,8 +449,10 @@ while True:
             window['glider_image'].update(filename=glider_icon)
 
     if event == '-GENERATECUP-':
-        # TODO - get updated cup icon from backend
-        window['cup_image'].update(filename=cup_icon)
+        randomizeCup()
+        cup = getCurrentCup()
+
+        window['cup_image'].update(filename=cup.image)
 
     if event == '-ALLKARTCHECK-':
         window['-KARTCHECK-'].update(True)

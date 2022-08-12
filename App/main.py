@@ -2,6 +2,7 @@ import random
 import json
 from Track import Track
 from Character import Character
+from Cup import Cup
 
 lightCharacters = []
 mediumCharacters = []
@@ -32,6 +33,9 @@ usedTracks = []
 currentTrack = Track('','','')
 trackReset = 4
 
+cups = []
+currentCup = Cup('','')
+
 def getCurrentSetup():
 	global currentSetup
 	return currentSetup
@@ -59,6 +63,9 @@ def getCurrentTrack():
 def getTrackReset():
 	global trackReset
 	return trackReset
+
+def getCurrentCup():
+	return currentCup
 
 def setTrackReset(races):
 	global trackReset
@@ -169,11 +176,21 @@ def randomizeTrack(reroll):
 			trackReset = 4
 	usedTracks.append(track)
 		
+def randomizeCup():
+	global cups
+	global currentCup
+	cup = cups[random.randint(0, len(cups)-1)]
+	while cup == currentCup:
+		cup = cups[random.randint(0, len(cups)-1)]
+	currentCup = cup
+
 def initialize():
 	global tracks
 	global lightCharacters
 	global mediumCharacters
 	global heavyCharacters
+	global cups
+
 	file = open('App\\tracks.json')
 	trackData = json.load(file)
 	for i in trackData['tracks']:
@@ -188,6 +205,11 @@ def initialize():
 			mediumCharacters.append(Character(i['name'], i['weight'], i['image']))
 		else:
 			heavyCharacters.append(Character(i['name'], i['weight'], i['image']))
+	file.close()
+	file = open('App\cup.json')
+	cupData = json.load(file)
+	for i in cupData['cups']:
+		cups.append(Cup(i['name'], i['image']))
 	file.close()
 
 # def main():
