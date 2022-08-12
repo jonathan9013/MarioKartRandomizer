@@ -430,24 +430,24 @@ track_icon1 = get_track_icon(currTrack)
 
 left_column = [
     [
-        gui.Text('Character'),
-        gui.Image(filename=char_icon, key='char_image'),
-        gui.Button('Reroll', key='-REROLLCHAR-')
+        gui.Button('Reroll', key='-REROLLCHAR-'),
+        gui.Image(filename=char_icon, key='char_image', pad=((56, 35),(10, 10))),
+        gui.Text('Character', font=('Helvetica', 12, 'bold')),
     ],
     [
-        gui.Text('Kart'),
-        gui.Image(filename=kart_icon, key='kart_image'),
-        gui.Button('Reroll', key='-REROLLKART-')
+        gui.Button('Reroll', key='-REROLLKART-'),
+        gui.Image(filename=kart_icon, key='kart_image', pad=((20, 15),(10, 10))),
+        gui.Text('Kart', font=('Helvetica', 12, 'bold')),
     ],
     [
-        gui.Text('Tire'),
-        gui.Image(filename=tire_icon, key='tire_image'),
-        gui.Button('Reroll', key='-REROLLTIRE-')
+        gui.Button('Reroll', key='-REROLLTIRE-'),
+        gui.Image(filename=tire_icon, key='tire_image', pad=((20, 15),(10, 10))),
+        gui.Text('Tire', font=('Helvetica', 12, 'bold')),
     ],
     [
-        gui.Text('Glider'),
-        gui.Image(filename=glider_icon, key='glider_image'),
-        gui.Button('Reroll', key='-REROLLGLIDER-')
+        gui.Button('Reroll', key='-REROLLGLIDER-'),
+        gui.Image(filename=glider_icon, key='glider_image', pad=((20, 15),(10, 10))),
+        gui.Text('Glider', font=('Helvetica', 12, 'bold')),
     ],
     [gui.Button('Generate', key='-GENLOADOUT-')],
     [
@@ -455,13 +455,13 @@ left_column = [
         gui.Checkbox("Standard Bikes", default = True, font=('Helvetica', 10), key='-BIKECHECK-'),
         gui.Checkbox("Sport Bikes", default = True, font=('Helvetica', 10), key='-SPORTCHECK-'),
         gui.Checkbox("ATVs", default = True, font=('Helvetica', 10), key='-ATVCHECK-'),
-        gui.Button("Enable all", font=('Helvetica', 10, 'bold'), key='-ALLKARTCHECK-'),
+        gui.Button("Enable all", font=('Helvetica', 10), key='-ALLKARTCHECK-'),
     ],
     [
         gui.Checkbox("Light", default = True, font=('Helvetica', 10), key='-LIGHTCHECK-'),
         gui.Checkbox("Medium", default = True, font=('Helvetica', 10), key='-MEDCHECK-'),
         gui.Checkbox("Heavy", default = True, font=('Helvetica', 10), key='-HEAVYCHECK-'),
-        gui.Button("Enable all", font=('Helvetica', 10, 'bold'),  key='-ALLSIZECHECK-')
+        gui.Button("Enable all", font=('Helvetica', 10),  key='-ALLSIZECHECK-')
     ],
 ]
 right_column = [
@@ -496,7 +496,7 @@ right_column = [
         gui.Button('Set Track Reset', key="_setTrackReset_")
     ],
 	[
-        gui.Text("Current number of tracks before rest: "),
+        gui.Text("Current number of tracks before reset:"),
         gui.Text(getTrackReset(), key="track_reset")
     ],
 ]
