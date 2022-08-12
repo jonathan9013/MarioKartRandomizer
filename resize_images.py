@@ -3,7 +3,7 @@ from os import listdir
 from PIL import Image
 
 # get the path/directory
-folder_dir = "C:\Dev\MarioKartRandomizerApp\MarioKartRandomizer\\app\media\\atvs"
+folder_dir = "C:\Dev\MarioKartRandomizerApp\MarioKartRandomizer\\app\media\\cups"
 for images in os.listdir(folder_dir):
     image_dir = folder_dir + '\\' + images
     im1 = Image.open(image_dir)
@@ -15,7 +15,7 @@ for images in os.listdir(folder_dir):
     # im1 = im1.resize((basewidth, hsize), Image.ANTIALIAS)
 
     # use base height
-    baseheight = 100
+    baseheight = 106
     wpercent = (baseheight/float(im1.size[1]))
     wsize = int((float(im1.size[0])*float(wpercent)))
     im1 = im1.resize((wsize, baseheight), Image.ANTIALIAS)
