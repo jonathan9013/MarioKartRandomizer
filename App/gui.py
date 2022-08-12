@@ -558,7 +558,9 @@ while True:
         window['track_image1'].update(filename=track_icon)
 
     if event == '-GENERATETRACK-':
-        numberOfTracks = int(gui.popup_get_text('Enter the number of tracks you would like to generate: ', keep_on_top=True))
+        # numberOfTracks = gui.popup_get_text('Enter the number of tracks you would like to generate: ', keep_on_top=True)
+        # if numberOfTracks != None:
+        # numberOfTracks = int(numberOfTracks)
         randomizeTrack(False)
         currTrack = getCurrentTrack()
         track_icon = get_track_icon(currTrack)

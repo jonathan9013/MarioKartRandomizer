@@ -73,6 +73,8 @@ def getTrackReset():
 
 def setTrackReset(races):
 	global trackReset
+	global usedTracks
+	usedTracks =[]
 	trackReset = races
 
 def makeLists(charOpt, kartOpt):
@@ -172,11 +174,12 @@ def randomizeTrack(reroll):
 		track = tracks[random.randint(0, len(tracks)-1)]
 	currentTrack = track
 	if not reroll:
-		usedTracks.append(track)
 		trackReset = trackReset - 1
 		if trackReset == 0:
 			usedTracks = []
 			trackReset = 4
+	usedTracks.append(track)
+		
 
 # def main():
 # 	makeLists([],[])
