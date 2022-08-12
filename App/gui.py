@@ -4,6 +4,7 @@ from main import *
 from Track import Track
 from Character import Character
 
+# TODO - REMOVE THESE
 def get_char_icon(currCharacter):
     match currCharacter:
         case "Baby Daisy":
