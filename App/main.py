@@ -1,4 +1,7 @@
 import random
+import json
+from Track import Track
+
 lightCharacters = ["Toad", "Koopa Troopa", "Shy Guy", "Lakitu", "Toadette", "Baby Mario", "Baby Luigi", "Baby Peach", "Baby Daisy", "Baby Rosalina", "Dry Bones", "Bowser Jr.", "Lemmy", "Larry", "Wendy", "Isabelle"]
 mediumCharacters = ["Daisy", "Peach", "Yoshi", "Tanooki Mario", "Cat Peach", "Villager Boy", "Villager Girl", "Inkling Girl", "Inkling Boy", "Mario", "Luigi", "Ludwig", "Iggy"]
 heavyCharacters = ["Donkey Kong", "Metal Mario", "Pink Gold Peach", "Rosalina", "Roy", "Waluigi", "Link", "King Boo", "Bowser", "Wario", "Morton", "Dry Bowser"]
@@ -23,24 +26,9 @@ currentSetup =  {"character": "",
 				 "tire": "",
 				 "glider": ""}
 
-tracks = ["Mario Kart Stadium", "Water Park", "Sweet Sweet Canyon", "Thwomp Ruins",
-		  "Mario Circuit (Flower Cup)", "Toad Harbor", "Twisted Mansion", "Shy Guy Falls",
-		  "Sunshine Airport", "Dolphin Shoals", "Electrodome", "Mount Wario",
-		  "Cloudtop Cruise", "Bone-Dry Dunes", "Bowser's Castle", "Rainbow Road (Special Cup)",
-		  "Yoshi Circuit", "Excitebike Arena", "Dragon Driftway", "Mute City",
-		  "Baby Park", "Cheese Land", "Wild Woods", "Animal Crossing",
-		  "Moo Moo Meadows", "Mario Circuit (Shell Cup)", "Cheep Cheep Beach", "Toad's Turnpike",
-		  "Dry Dry Desert", "Donut Plains 3", "Royal Raceway", "DK Jungle",
-		  "Wario Stadium", "Sherbert Land", "Music Park", "Yoshi Valley",
-		  "Tick-Tock Clock", "Piranha Plant Slide", "Grumble Volcano", "Rainbow Road (Lightning Cup)",
-		  "Wario's Gold Mine", "Rainbow Road (Triforce Cup)", "Ice Ice Outpost", "Hyrule Circuit",
-		  "Neo Bowser City", "Ribbon Road", "Super Bell Subway", "Big Blue",
-		  "Paris Promenade", "Toad Circuit", "Choco Mountain", "Coconut Mall",
-		  "Tokyo Blur", "Shroom Ridge", "Sky Garden", "Ninja Hideaway",
-		  "New York Minute", "Mario Circuit 3", "Kalamari Desert", "Waluigi Pinball",
-		  "Sydney Sprint", "Snow Land", "Mushroom Gorge", "Sky-High Sundae"]
+tracks = []
 usedTracks = []
-currentTrack = ""
+currentTrack = Track('','','')
 trackReset = 4
 
 def getCurrentSetup():
@@ -180,41 +168,48 @@ def randomizeTrack(reroll):
 			trackReset = 4
 	usedTracks.append(track)
 		
-
+def initialize():
+	global tracks
+	file = open('App\\tracks.json')
+	trackData = json.load(file)
+	for i in trackData['tracks']:
+		tracks.append(Track(i['name'], i['cup'], i['image']))
+	file.close()
 # def main():
-# 	makeLists([],[])
-# 	userInput = input("Enter Command: ")
-# 	while userInput != 'exit':
-# 		match userInput:
-# 			case "randomize":
-# 				print("Previous setup: ")
-# 				print(previousSetup)
-# 				print("Current setup: ")
-# 				print(currentSetup)
-# 				randomize()
-# 				print("Previous setup: ")
-# 				print(previousSetup)
-# 				print("Current setup: ")
-# 				print(currentSetup)
-# 			case "reroll character":
-# 				randomizeAspect("character")
-# 				print(currentSetup)
-# 			case "reroll kart":
-# 				randomizeAspect("kart")
-# 				print(currentSetup)
-# 			case "reroll tires":
-# 				randomizeAspect("tires")
-# 				print(currentSetup)
-# 			case "reroll glider":
-# 				randomizeAspect("glider")
-# 				print(currentSetup)
-# 			case "randomize track":
-# 				randomizeTrack()
-# 				print(currentTrack)
-# 			case _:
-# 				print("Error Unrecognized Command Try Again")
-# 		userInput = input("Enter New Command: ")
-# 	print("goodbye")
+# 	initialize()
+	# makeLists([],[])
+	# userInput = input("Enter Command: ")
+	# while userInput != 'exit':
+	# 	match userInput:
+	# 		case "randomize":
+	# 			print("Previous setup: ")
+	# 			print(previousSetup)
+	# 			print("Current setup: ")
+	# 			print(currentSetup)
+	# 			randomize()
+	# 			print("Previous setup: ")
+	# 			print(previousSetup)
+	# 			print("Current setup: ")
+	# 			print(currentSetup)
+	# 		case "reroll character":
+	# 			randomizeAspect("character")
+	# 			print(currentSetup)
+	# 		case "reroll kart":
+	# 			randomizeAspect("kart")
+	# 			print(currentSetup)
+	# 		case "reroll tires":
+	# 			randomizeAspect("tires")
+	# 			print(currentSetup)
+	# 		case "reroll glider":
+	# 			randomizeAspect("glider")
+	# 			print(currentSetup)
+	# 		case "randomize track":
+	# 			randomizeTrack()
+	# 			print(currentTrack)
+	# 		case _:
+	# 			print("Error Unrecognized Command Try Again")
+	# 	userInput = input("Enter New Command: ")
+	# print("goodbye")
 
 # if __name__=="__main__":
 # 	main()
