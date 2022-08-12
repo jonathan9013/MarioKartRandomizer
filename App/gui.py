@@ -428,6 +428,7 @@ kart_icon = get_kart_icon(currKart)
 tire_icon = get_tire_icon(currTire)
 glider_icon = get_glider_icon(currGlider)
 track_icon1 = get_track_icon(currTrack)
+cup_icon = 'app\media\cups\MK8D_BCP_Golden_Dash_Emblem.png' # TODO - get icon from backend
 
 left_column = [
     [
@@ -540,6 +541,10 @@ right_column = [
         gui.Text("Current number of tracks before reset:"),
         gui.Text(getTrackReset(), key="track_reset")
     ],
+    [
+        gui.Image(filename=cup_icon, key='cup_image', pad=((5,15),(30,10))),
+        gui.Button('Generate Cup', key="-GENERATECUP-", mouseover_colors='#183440', pad=((5,5),(30,10)))
+    ],
 ]
 
 layout = [
@@ -648,6 +653,10 @@ while True:
             window['kart_image'].update(filename=kart_icon)
             window['tire_image'].update(filename=tire_icon)
             window['glider_image'].update(filename=glider_icon)
+
+    if event == '-GENERATECUP-':
+        # TODO - get updated cup icon from backend
+        window['cup_image'].update(filename=cup_icon)
 
     if event == '-ALLKARTCHECK-':
         window['-KARTCHECK-'].update(True)
