@@ -1,6 +1,8 @@
 from tkinter import TOP
 import PySimpleGUI as gui
 from main import *
+from Track import Track
+from Character import Character
 
 def get_char_icon(currCharacter):
     match currCharacter:
@@ -256,137 +258,6 @@ def get_glider_icon(currGlider):
         case "Wario Wing":
             return "app\media\gliders\WarioWingMK8.png"
 
-def get_track_icon(currTrack):
-	match currTrack:
-		case "DK Jungle":
-			return "app\media\\tracks\MK8_3DS_DK_Jungle_Course_Icon.png"
-		case "Music Park":
-			return "app\media\\tracks\MK8_3DS_Music_Park_Course_Icon.png"
-		case "Neo Bowser City":
-			return "app\media\\tracks\MK8_3DS_Neo_Bowser_City_Course_Icon.png"
-		case "Piranha Plant Slide":
-			return "app\media\\tracks\MK8_3DS_Piranha_Plant_Slide_Course_Icon.png"
-		case "Animal Crossing":
-			return "app\media\\tracks\MK8_Animal_Crossing_Course_Icon.png"
-		case "Big Blue":
-			return "app\media\\tracks\MK8_Big_Blue_Course_Icon.png"
-		case "Bone-Dry Dunes":
-			return "app\media\\tracks\MK8_Bone-Dry_Dunes_Course_Icon.png"
-		case "Bowser's Castle":
-			return "app\media\\tracks\MK8_Bowser's_Castle_Course_Icon.png"
-		case "Cloudtop Cruise":
-			return "app\media\\tracks\MK8_Cloudtop_Cruise_Course_Icon.png"
-		case "Dolphin Shoals":
-			return "app\media\\tracks\MK8_Dolphin_Shoals_Course_Icon.png"
-		case "Dragon Driftway":
-			return "app\media\\tracks\MK8_Dragon_Driftway_Course_Icon.png"
-		case "Cheep Cheep Beach":
-			return "app\media\\tracks\MK8_DS_Cheep_Cheep_Beach_Course_Icon.png"
-		case "Tick-Tock Clock":
-			return "app\media\\tracks\MK8_DS_Tick-Tock_Clock_Course_Icon.png"
-		case "Wario Stadium":
-			return "app\media\\tracks\MK8_DS_Wario_Stadium_Course_Icon.png"
-		case "Electrodome":
-			return "app\media\\tracks\MK8_Electrodrome_Course_Icon.png"
-		case "Excitebike Arena":
-			return "app\media\\tracks\MK8_Excitebike_Arena_Course_Icon.png"
-		case "Cheese Land":
-			return "app\media\\tracks\MK8_GBA_Cheese_Land_Course_Icon.png"
-		case "Mario Circuit (Shell Cup)":
-			return "app\media\\tracks\MK8_GBA_Mario_Circuit_Course_Icon.png"
-		case "Ribbon Road":
-			return "app\media\\tracks\MK8_GBA_Ribbon_Road_Course_Icon.png"
-		case "Baby Park":
-			return "app\media\\tracks\MK8_GCN_Baby_Park_Course_Icon.png"
-		case "Dry Dry Desert":
-			return "app\media\\tracks\MK8_GCN_Dry_Dry_Desert_Course_Icon.png"
-		case "Sherbert Land":
-			return "app\media\\tracks\MK8_GCN_Sherbet_Land_Course_Icon.png"
-		case "Yoshi Circuit":
-			return "app\media\\tracks\MK8_GCN_Yoshi_Circuit_Course_Icon.png"
-		case "Hyrule Circuit":
-			return "app\media\\tracks\MK8_Hyrule_Circuit_Course_Icon.png"
-		case "Ice Ice Outpost":
-			return "app\media\\tracks\MK8_Ice_Ice_Outpost_Course_Icon.png"
-		case "Mario Circuit (Flower Cup)":
-			return "app\media\\tracks\MK8_Mario_Circuit_Course_Icon.png"
-		case "Mario Kart Stadium":
-			return "app\media\\tracks\MK8_Mario_Kart_Stadium_Course_Icon.png"
-		case "Mount Wario":
-			return "app\media\\tracks\MK8_Mount_Wario_Course_Icon.png"
-		case "Mute City":
-			return "app\media\\tracks\MK8_Mute_City_Course_Icon.png"
-		case "Rainbow Road (Lightning Cup)":
-			return "app\media\\tracks\MK8_N64_Rainbow_Road_Course_Icon.png"
-		case "Royal Raceway":
-			return "app\media\\tracks\MK8_N64_Royal_Raceway_Course_Icon.png"
-		case "Toad's Turnpike":
-			return "app\media\\tracks\MK8_N64_Toad's_Turnpike_Course_Icon.png"
-		case "Yoshi Valley":
-			return "app\media\\tracks\MK8_N64_Yoshi_Valley_Course_Icon.png"
-		case "Rainbow Road (Special Cup)":
-			return "app\media\\tracks\MK8_Rainbow_Road_Course_Icon.png"
-		case "Shy Guy Falls":
-			return "app\media\\tracks\MK8_Shy_Guy_Falls_Course_Icon.png"
-		case "Donut Plains 3":
-			return "app\media\\tracks\MK8_SNES_Donut_Plains_3_Course_Icon.png"
-		case "Rainbow Road (Triforce Cup)":
-			return "app\media\\tracks\MK8_SNES_Rainbow_Road_Course_Icon.png"
-		case "Sunshine Airport":
-			return "app\media\\tracks\MK8_Sunshine_Airport_Course_Icon.png"
-		case "Super Bell Subway":
-			return "app\media\\tracks\MK8_Super_Bell_Subway_Course_Icon.png"
-		case "Sweet Sweet Canyon":
-			return "app\media\\tracks\MK8_Sweet_Sweet_Canyon_Course_Icon.png"
-		case "Thwomp Ruins":
-			return "app\media\\tracks\MK8_Thwomp_Ruins_Course_Icon.png"
-		case "Toad Harbor":
-			return "app\media\\tracks\MK8_Toad_Harbor_Course_Icon.png"
-		case "Twisted Mansion":
-			return "app\media\\tracks\MK8_Twisted_Mansion_Course_Icon.png"
-		case "Water Park":
-			return "app\media\\tracks\MK8_Water_Park_Course_Icon.png"
-		case "Grumble Volcano":
-			return "app\media\\tracks\MK8_Wii_Grumble_Volcano_Course_Icon.png"
-		case "Moo Moo Meadows":
-			return "app\media\\tracks\MK8_Wii_Moo_Moo_Meadows_Course_Icon.png"
-		case "Wario's Gold Mine":
-			return "app\media\\tracks\MK8_Wii_Wario's_Gold_Mine_Course_Icon.png"
-		case "Wild Woods":
-			return "app\media\\tracks\MK8_Wild_Woods_Course_Icon.png"
-		case "Toad Circuit":
-			return "app\media\\tracks\MK8D_3DS_Toad_Circuit_Course_Icon.png"
-		case "Shroom Ridge":
-			return "app\media\\tracks\MK8D_DS_Shroom_Ridge_Course_Icon.png"
-		case "Waluigi Pinball":
-			return "app\media\\tracks\MK8D_DS_Waluigi_Pinball_Course_Icon.png"
-		case "Sky Garden":
-			return "app\media\\tracks\MK8D_GBA_Sky_Garden_Course_Icon.png"
-		case "Snow Land":
-			return "app\media\\tracks\MK8D_GBA_Snow_Land_Course_Icon.png"
-		case "Choco Mountain":
-			return "app\media\\tracks\MK8D_N64_Choco_Mountain_Course_Icon.png"
-		case "Kalamari Desert":
-			return "app\media\\tracks\MK8D_N64_Kalimari_Desert_Course_Icon.png"
-		case "Ninja Hideaway":
-			return "app\media\\tracks\MK8D_Ninja_Hideaway_Course_Icon.png"
-		case "Sky-High Sundae":
-			return "app\media\\tracks\MK8D_Sky-High_Sundae_Course_Icon.png"
-		case "Mario Circuit 3":
-			return "app\media\\tracks\MK8D_SNES_Mario_Circuit_3_Course_Icon.png"
-		case "New York Minute":
-			return "app\media\\tracks\MK8D_Tour_New_York_Minute_Course_Icon.png"
-		case "Paris Promenade":
-			return "app\media\\tracks\MK8D_Tour_Paris_Promenade_Course_Icon.png"
-		case "Sydney Sprint":
-			return "app\media\\tracks\MK8D_Tour_Sydney_Sprint_Course_Icon.png"
-		case "Tokyo Blur":
-			return "app\media\\tracks\MK8D_Tour_Tokyo_Blur_Course_Icon.png"
-		case "Coconut Mall":
-			return "app\media\\tracks\MK8D_Wii_Coconut_Mall_Course_Icon.png"
-		case "Mushroom Gorge":
-			return "app\media\\tracks\MK8D_Wii_Mushroom_Gorge_Course_Icon.png"
-
 def check_valid(type_array, size_array):
     kart_exists = False
     size_exists = False
@@ -411,6 +282,7 @@ def check_valid(type_array, size_array):
 gui.theme("LightBlue3") # set theme
 
 # initial calls to main
+initialize()
 makeLists(['Light', 'Medium', 'Heavy'], ['Karts', 'Standard Bikes', 'Sport Bikes', 'ATVs'])
 randomize()
 randomizeTrack(False)
@@ -423,11 +295,11 @@ currTire = getCurrentTire()
 currGlider = getCurrentGlider()
 
 # call case match functions to get correct file paths
-char_icon = get_char_icon(currCharacter)
+char_icon = currCharacter.image
 kart_icon = get_kart_icon(currKart)
 tire_icon = get_tire_icon(currTire)
 glider_icon = get_glider_icon(currGlider)
-track_icon1 = get_track_icon(currTrack)
+track_icon1 = currTrack.image
 cup_icon = 'app\media\cups\MK8D_BCP_Golden_Dash_Emblem.png' # TODO - get icon from backend
 
 left_column = [
@@ -566,7 +438,7 @@ while True:
     if event == '-REROLLCHAR-':
         randomizeAspect("character")
         currCharacter = getCurrentCharacter()
-        char_icon = get_char_icon(currCharacter)
+        char_icon = currCharacter.image
 
         element = window[event]
         window['char_image'].update(filename=char_icon)
@@ -598,7 +470,7 @@ while True:
     if event == '-REROLLTRACK1-':
         randomizeTrack(True)
         currTrack = getCurrentTrack()
-        track_icon = get_track_icon(currTrack)
+        track_icon = currTrack.image
 
         element = window[event]
         window['track_image1'].update(filename=track_icon)
@@ -609,7 +481,7 @@ while True:
         # numberOfTracks = int(numberOfTracks)
         randomizeTrack(False)
         currTrack = getCurrentTrack()
-        track_icon = get_track_icon(currTrack)
+        track_icon = currTrack.image
 
         element = window[event]
         window['track_image1'].update(filename=track_icon)
@@ -638,7 +510,7 @@ while True:
             randomize()
 
             currCharacter = getCurrentCharacter()
-            char_icon = get_char_icon(currCharacter)
+            char_icon = currCharacter.image
 
             currKart = getCurrentKart()
             kart_icon = get_kart_icon(currKart)
