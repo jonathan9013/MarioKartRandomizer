@@ -1,6 +1,7 @@
 import PySimpleGUI as gui
 from main import *
 from Track import Track
+from Character import Character
 
 def get_char_icon(currCharacter):
     match currCharacter:
@@ -293,7 +294,7 @@ currTire = getCurrentTire()
 currGlider = getCurrentGlider()
 
 # call case match functions to get correct file paths
-char_icon = get_char_icon(currCharacter)
+char_icon = currCharacter.image
 kart_icon = get_kart_icon(currKart)
 tire_icon = get_tire_icon(currTire)
 glider_icon = get_glider_icon(currGlider)
@@ -391,7 +392,7 @@ while True:
     if event == '-REROLLCHAR-':
         randomizeAspect("character")
         currCharacter = getCurrentCharacter()
-        char_icon = get_char_icon(currCharacter)
+        char_icon = currCharacter.image
 
         element = window[event]
         window['char_image'].update(filename=char_icon)
@@ -463,7 +464,7 @@ while True:
             randomize()
 
             currCharacter = getCurrentCharacter()
-            char_icon = get_char_icon(currCharacter)
+            char_icon = currCharacter.image
 
             currKart = getCurrentKart()
             kart_icon = get_kart_icon(currKart)
