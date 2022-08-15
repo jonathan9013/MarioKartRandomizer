@@ -1,0 +1,92 @@
+{
+	"tires": [
+		{
+			"name": "Azure Roller",
+			"image": "App\\media\\tires\\AzureRollerTiresMK8.png"
+		},
+		{
+			"name": "Blue Standard",
+			"image": "App\\media\\tires\\Blue_Standard.png"
+		},
+		{
+			"name": "Button",
+			"image": "App\\media\\tires\\ButtonTiresMK8.png"
+		},
+		{
+			"name": "Crimson Slim",
+			"image": "App\\media\\tires\\CrimsonSlimTiresMK8.png"
+		},
+		{
+			"name": "Cushion",
+			"image": "App\\media\\tires\\CushionTiresMK8.png"
+		},
+		{
+			"name": "Cyber Slick",
+			"image": "App\\media\\tires\\CyberSlickTiresMK8.png"
+		},
+		{
+			"name": "GLA Tires",
+			"image": "App\\media\\tires\\GLATires-MK8.png"
+		},
+		{
+			"name": "Gold Tires",
+			"image": "App\\media\\tires\\Gold_Tires_MK8.png"
+		},
+		{
+			"name": "Hot Monster",
+			"image": "App\\media\\tires\\HotMonsterTiresMK8.png"
+		},
+		{
+			"name": "Leaf Tires",
+			"image": "App\\media\\tires\\Leaf_Tires_MK8.png"
+		},
+		{
+			"name": "Metal",
+			"image": "App\\media\\tires\\MetalTiresMK8.png"
+		},
+		{
+			"name": "Triforce Tires",
+			"image": "App\\media\\tires\\MK8-TriforceTires.png"
+		},
+		{
+			"name": "Ancient Tires",
+			"image": "App\\media\\tires\\MK8D_Ancient_Tires.png"
+		},
+		{
+			"name": "Monster",
+			"image": "App\\media\\tires\\MonsterTiresMK8.png"
+		},
+		{
+			"name": "Off-Road",
+			"image": "App\\media\\tires\\Off-Road.png"
+		},
+		{
+			"name": "Retro Off-Road",
+			"image": "App\\media\\tires\\Retro_Off-Road.png"
+		},
+		{
+			"name": "Roller",
+			"image": "App\\media\\tires\\RollerTiresMK8.png"
+		},
+		{
+			"name": "Slick",
+			"image": "App\\media\\tires\\SlickTiresMK8.png"
+		},
+		{
+			"name": "Slim",
+			"image": "App\\media\\tires\\SlimTiresMK8.png"
+		},
+		{
+			"name": "Sponge",
+			"image": "App\\media\\tires\\SpongeTiresMK8.png"
+		},
+		{
+			"name": "Standard",
+			"image": "App\\media\\tires\\StandardTiresMK8.png"
+		},
+		{
+			"name": "Wood",
+			"image": "App\\media\\tires\\WoodTiresMK8.png"
+		}
+	]
+}

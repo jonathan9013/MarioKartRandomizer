@@ -1,0 +1,64 @@
+{
+	"gliders": [
+		{
+			"name": "Bowser Kite",
+			"image": "App\\media\\gliders\\BowserKiteMK8.png"
+		},
+		{
+			"name": "Cloud Glider",
+			"image": "App\\media\\gliders\\Cloud_Glider.png"
+		},
+		{
+			"name": "Flower Glider",
+			"image": "App\\media\\gliders\\FlowerGliderMK8.png"
+		},
+		{
+			"name": "Gold Glider",
+			"image": "App\\media\\gliders\\GoldGliderMK8.png"
+		},
+		{
+			"name": "Hylian Kite",
+			"image": "App\\media\\gliders\\MK8-HylianKite.png"
+		},
+		{
+			"name": "Paraglider",
+			"image": "App\\media\\gliders\\MK8D_Paraglider.png"
+		},
+		{
+			"name": "MKTV Parafoil",
+			"image": "App\\media\\gliders\\MKTVParafoilGliderMK8.png"
+		},
+		{
+			"name": "Paper Glider",
+			"image": "App\\media\\gliders\\PaperGliderIcon-MK8.png"
+		},
+		{
+			"name": "Parachute",
+			"image": "App\\media\\gliders\\ParachuteGliderMK8.png"
+		},
+		{
+			"name": "Parafoil",
+			"image": "App\\media\\gliders\\ParafoilGliderMK8.png"
+		},
+		{
+			"name": "Peach Parasol",
+			"image": "App\\media\\gliders\\PeachParasolGliderMK8.png"
+		},
+		{
+			"name": "Plane Glider",
+			"image": "App\\media\\gliders\\PlaneGliderMK8.png"
+		},
+		{
+			"name": "Super Glider",
+			"image": "App\\media\\gliders\\SuperGliderMK8.png"
+		},
+		{
+			"name": "Waddle Wing",
+			"image": "App\\media\\gliders\\WaddleWingMK8.png"
+		},
+		{
+			"name": "Wario Wing",
+			"image": "App\\media\\gliders\\WarioWingMK8.png"
+		}
+	]
+}

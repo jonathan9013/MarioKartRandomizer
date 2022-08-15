@@ -3,30 +3,32 @@ import json
 from Track import Track
 from Character import Character
 from Cup import Cup
+from kart import Kart
+from glider import Glider
+from tire import Tire
 
 lightCharacters = []
 mediumCharacters = []
 heavyCharacters = []
 characterList = []
 
-karts = ["Standard Kart", "Pipe Frame", "Mach 8", "Steel Driver", "Cat Cruiser", "Circuit Special", "Tri-Speeder", "Badwagon", "Prancer", "Biddybuggy", "Landship", "Sneeker", "Sports Coupe", "Gold Standard", "GLA", "W 25 Silver Arrow", "300 SL Roadster", "Blue Falcon", "Tanooki Kart", "B Dasher", "Streetle", "P-Wing", "Koopa Clown"]
-bikes = ["Standard Bike", "The Duke", "Flame Rider", "Varmint", "Mr. Scooty", "Master Cycle Zero", "City Tripper"]
-sportsBikes = ["Comet", "Sport Bike", "Jet Bike", "Yoshi Bike", "Master Cycle"]
-atvs = ["Standard ATV", "Wild Wiggler", "Teddy Buggy", "Bone Rattler", "Splat Buggy", "Inkstriker"]
+karts = []
+bikes = []
+atvs = []
+sportsBikes = []
 kartList = []
 
-tires = ["Standard", "Monster", "Roller", "Slim", "Slick", "Metal", "Button", "Off-Road", "Sponge", "Wood", "Cushion", "Blue Standard", "Hot Monster", "Azure Roller", "Crimson Slim", "Cyber Slick", "Retro Off-Road", "Gold Tires", "GLA Tires", "Triforce Tires", "Ancient Tires", "Leaf Tires"]
-
-gliders = ["Super Glider", "Cloud Glider", "Wario Wing", "Waddle Wing", "Peach Parasol", "Parachute", "Parafoil", "Flower Glider", "Bowser Kite", "Plane Glider", "MKTV Parafoil", "Gold Glider", "Hylian Kite", "Paraglider", "Paper Glider"]
+tires = []
+gliders = []
 
 previousSetup = {"character": Character("", "", ""),
-				 "kart": "",
-				 "tire": "",
-				 "glider": ""}
+				 "kart": Kart("", "", ""),
+				 "tire": Tire("", ""),
+				 "glider": Glider("", "")}
 currentSetup =  {"character": Character("", "", ""),
-				 "kart": "",
-				 "tire": "",
-				 "glider": ""}
+				 "kart": Kart("", "", ""),
+				 "tire": Tire("", ""),
+				 "glider": Glider("", "")}
 
 tracks = []
 usedTracks = []
@@ -175,7 +177,7 @@ def randomizeTrack(reroll):
 			usedTracks = []
 			trackReset = 4
 	usedTracks.append(track)
-		
+
 def randomizeCup():
 	global cups
 	global currentCup
@@ -190,12 +192,21 @@ def initialize():
 	global mediumCharacters
 	global heavyCharacters
 	global cups
+	global gliders
+	global tires
+	global karts
+	global atvs
+	global bikes
+	global sportsBikes
 
+	# initialize tracks
 	file = open('App\\tracks.json')
 	trackData = json.load(file)
 	for i in trackData['tracks']:
 		tracks.append(Track(i['name'], i['cup'], i['image']))
 	file.close()
+
+	# initialize characters
 	file = open('App\character.json')
 	charData = json.load(file)
 	for i in charData['characters']:
@@ -206,10 +217,40 @@ def initialize():
 		else:
 			heavyCharacters.append(Character(i['name'], i['weight'], i['image']))
 	file.close()
+
+	# initialize cups
 	file = open('App\cup.json')
 	cupData = json.load(file)
 	for i in cupData['cups']:
 		cups.append(Cup(i['name'], i['image']))
+	file.close()
+
+	# initialize karts
+	file = open('App\karts.json')
+	kartData = json.load(file)
+	for i in kartData['karts']:
+		if i['style'] == 'Kart':
+			karts.append(Kart(i['name'], i['image'], i['style']))
+		elif i['style'] == 'ATV':
+			atvs.append(Kart(i['name'], i['image'], i['style']))
+		elif i['style'] == 'Bike':
+			bikes.append(Kart(i['name'], i['image'], i['style']))
+		else:
+			sportsBikes.append(Kart(i['name'], i['image'], i['style']))
+	file.close()
+
+	# initialize gliders
+	file = open('App\gliders.json')
+	gliderData = json.load(file)
+	for i in gliderData['gliders']:
+		gliders.append(Glider(i['name'], i['image']))
+	file.close()
+
+	# initialize tires
+	file = open('App\\tires.json')
+	tireData = json.load(file)
+	for i in tireData['tires']:
+		tires.append(Tire(i['name'], i['image']))
 	file.close()
 
 # def main():
