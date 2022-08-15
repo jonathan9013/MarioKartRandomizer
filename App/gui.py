@@ -54,28 +54,35 @@ glider_icon = currGlider.image
 track_icon1 = currTrack.image
 cup_icon = currCup.image
 
+char_name = currCharacter.name
+kart_name = currKart.name
+tire_name = currTire.name
+glider_name = currGlider.name
+track_name1 = currTrack.name
+cup_name = currCup.name
+
 track_cup_text1 = currTrack.cup
 
 left_column = [
     [
         gui.Button(key='-REROLLCHAR-', image_filename=r'app\media\refresh_icon.png', border_width=0, button_color='#a8cfdd', mouseover_colors='#a8cfdd', pad=((10,5),(3,3))),
         gui.Image(filename=char_icon, key='char_image', pad=((56,35),(10,10))),
-        gui.Text('Character', font=('Helvetica', 12, 'bold')),
+        gui.Text(key='-CHARNAME-', text=char_name, font=('Helvetica', 12, 'bold')),
     ],
     [
         gui.Button(key='-REROLLKART-', image_filename=r'app\media\refresh_icon.png', border_width=0, button_color='#a8cfdd', mouseover_colors='#a8cfdd', pad=((10, 5),(3, 3))),
         gui.Image(filename=kart_icon, key='kart_image', pad=((20,15),(10,10))),
-        gui.Text('Kart', font=('Helvetica', 12, 'bold')),
+        gui.Text(key='-KARTNAME-', text=kart_name, font=('Helvetica', 12, 'bold')),
     ],
     [
         gui.Button(key='-REROLLTIRE-', image_filename=r'app\media\refresh_icon.png', border_width=0, button_color='#a8cfdd', mouseover_colors='#a8cfdd', pad=((10,5),(3,3))),
         gui.Image(filename=tire_icon, key='tire_image', pad=((20,15),(10,10))),
-        gui.Text('Tire', font=('Helvetica', 12, 'bold')),
+        gui.Text(key='-TIRENAME-', text=tire_name, font=('Helvetica', 12, 'bold')),
     ],
     [
         gui.Button(key='-REROLLGLIDER-', image_filename=r'app\media\refresh_icon.png', border_width=0, button_color='#a8cfdd', mouseover_colors='#a8cfdd', pad=((10,5),(3,3))),
         gui.Image(filename=glider_icon, key='glider_image', pad=((20,15),(10,10))),
-        gui.Text('Glider', font=('Helvetica', 12, 'bold')),
+        gui.Text(key='-GLIDERNAME-', text=glider_name, font=('Helvetica', 12, 'bold')),
     ],
     [gui.Button('Generate Loadout', key='-GENLOADOUT-', mouseover_colors='#183440', pad=((10,5),(20,20)))],
     [
@@ -193,33 +200,41 @@ while True:
         randomizeAspect("character")
         currCharacter = getCurrentCharacter()
         char_icon = currCharacter.image
+        char_name = currCharacter.name
 
         element = window[event]
         window['char_image'].update(filename=char_icon)
+        window['-CHARNAME-'].update(char_name)
 
     if event == '-REROLLKART-':
         randomizeAspect("kart")
         currKart = getCurrentKart()
         kart_icon = currKart.image
+        kart_name = currKart.name
 
         element = window[event]
         window['kart_image'].update(filename=kart_icon)
+        window['-KARTNAME-'].update(kart_name)
 
     if event == '-REROLLTIRE-':
         randomizeAspect("tires")
         currTire = getCurrentTire()
         tire_icon = currTire.image
+        tire_name = currTire.name
 
         element = window[event]
         window['tire_image'].update(filename=tire_icon)
+        window['-TIRENAME-'].update(tire_name)
 
     if event == '-REROLLGLIDER-':
         randomizeAspect("glider")
         currGlider = getCurrentGlider()
         glider_icon = currGlider.image
+        glider_name = currGlider.name
 
         element = window[event]
         window['glider_image'].update(filename=glider_icon)
+        window['-GLIDERNAME-'].update(glider_name)
 
     if event == '-REROLLTRACK1-':
         randomizeTrack(True)
@@ -267,20 +282,31 @@ while True:
 
             currCharacter = getCurrentCharacter()
             char_icon = currCharacter.image
+            char_name = currCharacter.name
 
             currKart = getCurrentKart()
             kart_icon = currKart.image
+            kart_name = currKart.name
 
             currTire = getCurrentTire()
             tire_icon = currTire.image
+            tire_name = currTire.name
 
             currGlider = getCurrentGlider()
             glider_icon = currGlider.image
+            glider_name = currGlider.name
 
             window['char_image'].update(filename=char_icon)
             window['kart_image'].update(filename=kart_icon)
             window['tire_image'].update(filename=tire_icon)
             window['glider_image'].update(filename=glider_icon)
+
+            window['-CHARNAME-'].update(char_name)
+            window['-KARTNAME-'].update(kart_name)
+            window['-TIRENAME-'].update(tire_name)
+            window['-GLIDERNAME-'].update(glider_name)
+
+
 
     if event == '-GENERATECUP-':
         randomizeCup()
