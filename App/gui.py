@@ -261,6 +261,69 @@ while True:
         window['track_image1'].update(filename=track_icon)
         window['track_cup1'].update(track_cup_text)
 
+    if event == '-REROLLTRACK2-':
+        randomizeTrack(True)
+        currTrack = getCurrentTrack()
+        track_icon = currTrack.image
+        track_cup_text = currTrack.cup
+
+        window['track_image2'].update(filename=track_icon)
+        window['track_cup2'].update(track_cup_text)
+
+    if event == '-REROLLTRACK3-':
+        randomizeTrack(True)
+        currTrack = getCurrentTrack()
+        track_icon = currTrack.image
+        track_cup_text = currTrack.cup
+
+        window['track_image3'].update(filename=track_icon)
+        window['track_cup3'].update(track_cup_text)
+
+    if event == '-REROLLTRACK4-':
+        randomizeTrack(True)
+        currTrack = getCurrentTrack()
+        track_icon = currTrack.image
+        track_cup_text = currTrack.cup
+
+        window['track_image4'].update(filename=track_icon)
+        window['track_cup4'].update(track_cup_text)
+
+    if event == '-REROLLTRACK5-':
+        randomizeTrack(True)
+        currTrack = getCurrentTrack()
+        track_icon = currTrack.image
+        track_cup_text = currTrack.cup
+
+        window['track_image5'].update(filename=track_icon)
+        window['track_cup5'].update(track_cup_text)
+
+    if event == '-REROLLTRACK6-':
+        randomizeTrack(True)
+        currTrack = getCurrentTrack()
+        track_icon = currTrack.image
+        track_cup_text = currTrack.cup
+
+        window['track_image6'].update(filename=track_icon)
+        window['track_cup6'].update(track_cup_text)
+
+    if event == '-REROLLTRACK7-':
+        randomizeTrack(True)
+        currTrack = getCurrentTrack()
+        track_icon = currTrack.image
+        track_cup_text = currTrack.cup
+
+        window['track_image7'].update(filename=track_icon)
+        window['track_cup7'].update(track_cup_text)
+
+    if event == '-REROLLTRACK8-':
+        randomizeTrack(True)
+        currTrack = getCurrentTrack()
+        track_icon = currTrack.image
+        track_cup_text = currTrack.cup
+
+        window['track_image8'].update(filename=track_icon)
+        window['track_cup8'].update(track_cup_text)
+
     if event == '-GENERATETRACK-':
         window['track1'].update(visible=False)
         window['track2'].update(visible=False)
