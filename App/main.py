@@ -1,11 +1,11 @@
 import random
 import json
-from Track import Track
-from Character import Character
-from Cup import Cup
-from kart import Kart
-from glider import Glider
-from tire import Tire
+from track import track
+from character import character
+from cup import cup
+from kart import kart
+from glider import glider
+from tire import tire
 
 lightCharacters = []
 mediumCharacters = []
@@ -21,22 +21,22 @@ kartList = []
 tires = []
 gliders = []
 
-previousSetup = {"character": Character("", "", ""),
-				 "kart": Kart("", "", ""),
-				 "tire": Tire("", ""),
-				 "glider": Glider("", "")}
-currentSetup =  {"character": Character("", "", ""),
-				 "kart": Kart("", "", ""),
-				 "tire": Tire("", ""),
-				 "glider": Glider("", "")}
+previousSetup = {"character": character("", "", ""),
+				 "kart": kart("", "", ""),
+				 "tire": tire("", ""),
+				 "glider": glider("", "")}
+currentSetup =  {"character": character("", "", ""),
+				 "kart": kart("", "", ""),
+				 "tire": tire("", ""),
+				 "glider": glider("", "")}
 
 tracks = []
 usedTracks = []
-currentTrack = Track('','','')
+currentTrack = track('','','')
 trackReset = 4
 
 cups = []
-currentCup = Cup('','')
+currentCup = cup('','')
 
 def getCurrentSetup():
 	global currentSetup
@@ -203,7 +203,7 @@ def initialize():
 	file = open('App\\tracks.json')
 	trackData = json.load(file)
 	for i in trackData['tracks']:
-		tracks.append(Track(i['name'], i['cup'], i['image']))
+		tracks.append(track(i['name'], i['cup'], i['image']))
 	file.close()
 
 	# initialize characters
@@ -211,18 +211,18 @@ def initialize():
 	charData = json.load(file)
 	for i in charData['characters']:
 		if i['weight'] == 'Light':
-			lightCharacters.append(Character(i['name'], i['weight'], i['image']))
+			lightCharacters.append(character(i['name'], i['weight'], i['image']))
 		elif i['weight'] == 'Medium':
-			mediumCharacters.append(Character(i['name'], i['weight'], i['image']))
+			mediumCharacters.append(character(i['name'], i['weight'], i['image']))
 		else:
-			heavyCharacters.append(Character(i['name'], i['weight'], i['image']))
+			heavyCharacters.append(character(i['name'], i['weight'], i['image']))
 	file.close()
 
 	# initialize cups
 	file = open('App\cup.json')
 	cupData = json.load(file)
 	for i in cupData['cups']:
-		cups.append(Cup(i['name'], i['image']))
+		cups.append(cup(i['name'], i['image']))
 	file.close()
 
 	# initialize karts
@@ -230,27 +230,27 @@ def initialize():
 	kartData = json.load(file)
 	for i in kartData['karts']:
 		if i['style'] == 'Kart':
-			karts.append(Kart(i['name'], i['image'], i['style']))
+			karts.append(kart(i['name'], i['image'], i['style']))
 		elif i['style'] == 'ATV':
-			atvs.append(Kart(i['name'], i['image'], i['style']))
+			atvs.append(kart(i['name'], i['image'], i['style']))
 		elif i['style'] == 'Bike':
-			bikes.append(Kart(i['name'], i['image'], i['style']))
+			bikes.append(kart(i['name'], i['image'], i['style']))
 		else:
-			sportsBikes.append(Kart(i['name'], i['image'], i['style']))
+			sportsBikes.append(kart(i['name'], i['image'], i['style']))
 	file.close()
 
 	# initialize gliders
 	file = open('App\gliders.json')
 	gliderData = json.load(file)
 	for i in gliderData['gliders']:
-		gliders.append(Glider(i['name'], i['image']))
+		gliders.append(glider(i['name'], i['image']))
 	file.close()
 
 	# initialize tires
 	file = open('App\\tires.json')
 	tireData = json.load(file)
 	for i in tireData['tires']:
-		tires.append(Tire(i['name'], i['image']))
+		tires.append(tire(i['name'], i['image']))
 	file.close()
 
 # def main():
