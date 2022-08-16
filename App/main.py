@@ -162,7 +162,7 @@ def randomizeAspect(aspect):
 			currentSetup["glider"] = glider
 			previousSetup["glider"] = glider
 
-def randomizeTrack(reroll):
+def randomizeTrack(reroll, reset = 4):
 	global tracks
 	global trackReset
 	global usedTracks
@@ -175,7 +175,7 @@ def randomizeTrack(reroll):
 		trackReset = trackReset - 1
 		if trackReset == 0:
 			usedTracks = []
-			trackReset = 4
+			trackReset = reset
 	usedTracks.append(track)
 
 def randomizeCup():
@@ -252,42 +252,3 @@ def initialize():
 	for i in tireData['tires']:
 		tires.append(Tire(i['name'], i['image']))
 	file.close()
-
-# def main():
-# 	initialize()
-	# makeLists([],[])
-	# userInput = input("Enter Command: ")
-	# while userInput != 'exit':
-	# 	match userInput:
-	# 		case "randomize":
-	# 			print("Previous setup: ")
-	# 			print(previousSetup)
-	# 			print("Current setup: ")
-	# 			print(currentSetup)
-	# 			randomize()
-	# 			print("Previous setup: ")
-	# 			print(previousSetup)
-	# 			print("Current setup: ")
-	# 			print(currentSetup)
-	# 		case "reroll character":
-	# 			randomizeAspect("character")
-	# 			print(currentSetup)
-	# 		case "reroll kart":
-	# 			randomizeAspect("kart")
-	# 			print(currentSetup)
-	# 		case "reroll tires":
-	# 			randomizeAspect("tires")
-	# 			print(currentSetup)
-	# 		case "reroll glider":
-	# 			randomizeAspect("glider")
-	# 			print(currentSetup)
-	# 		case "randomize track":
-	# 			randomizeTrack()
-	# 			print(currentTrack)
-	# 		case _:
-	# 			print("Error Unrecognized Command Try Again")
-	# 	userInput = input("Enter New Command: ")
-	# print("goodbye")
-
-# if __name__=="__main__":
-# 	main()
