@@ -3,7 +3,7 @@ from os import listdir
 from PIL import Image
 
 # get the path/directory
-folder_dir = "C:\Dev\MarioKartRandomizerApp\MarioKartRandomizer\App\media\\"
+folder_dir = "C:\Dev\MarioKartRandomizerApp\MarioKartRandomizer\\app\media\\"
 for images in os.listdir(folder_dir):
     image_dir = folder_dir + '\\' + images
     im1 = Image.open(image_dir)
