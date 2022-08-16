@@ -3,207 +3,207 @@
 		{
 			"name": "Toad",
 			"weight": "Light",
-			"image": "App\\media\\characters\\MK8_Toad_Icon.png"
+			"image": "app\\media\\characters\\MK8_Toad_Icon.png"
 		},
 		{
 			"name": "Koopa Troopa",
 			"weight": "Light",
-			"image": "App\\media\\characters\\MK8_Koopa_Icon.png"
+			"image": "app\\media\\characters\\MK8_Koopa_Icon.png"
 		},
 		{
 			"name": "Shy Guy",
 			"weight": "Light",
-			"image": "App\\media\\characters\\MK8_ShyGuy_Icon.png"
+			"image": "app\\media\\characters\\MK8_ShyGuy_Icon.png"
 		},
 		{
 			"name": "Lakitu",
 			"weight": "Light",
-			"image": "App\\media\\characters\\MK8_Lakitu_Icon.png"
+			"image": "app\\media\\characters\\MK8_Lakitu_Icon.png"
 		},
 		{
 			"name": "Toadette",
 			"weight": "Light",
-			"image": "App\\media\\characters\\MK8_Toadette_Icon.png"
+			"image": "app\\media\\characters\\MK8_Toadette_Icon.png"
 		},
 		{
 			"name": "Baby Mario",
 			"weight": "Light",
-			"image": "App\\media\\characters\\MK8_BabyMario_Icon.png"
+			"image": "app\\media\\characters\\MK8_BabyMario_Icon.png"
 		},
 		{
 			"name": "Baby Luigi",
 			"weight": "Light",
-			"image": "App\\media\\characters\\MK8_BabyLuigi_Icon.png"
+			"image": "app\\media\\characters\\MK8_BabyLuigi_Icon.png"
 		},
 		{
 			"name": "Baby Peach",
 			"weight": "Light",
-			"image": "App\\media\\characters\\MK8_BabyPeach_Icon.png"
+			"image": "app\\media\\characters\\MK8_BabyPeach_Icon.png"
 		},
 		{
 			"name": "Baby Daisy",
 			"weight": "Light",
-			"image": "App\\media\\characters\\MK8_BabyDaisy_Icon.png"
+			"image": "app\\media\\characters\\MK8_BabyDaisy_Icon.png"
 		},
 		{
 			"name": "Baby Rosalina",
 			"weight": "Light",
-			"image": "App\\media\\characters\\MK8_BabyRosalina_Icon.png"
+			"image": "app\\media\\characters\\MK8_BabyRosalina_Icon.png"
 		},
 		{
 			"name": "Dry Bones",
 			"weight": "Light",
-			"image": "App\\media\\characters\\MK8DX_Dry_Bones_Icon.png"
+			"image": "app\\media\\characters\\MK8DX_Dry_Bones_Icon.png"
 		},
 		{
 			"name": "Bowser Jr.",
 			"weight": "Light",
-			"image": "App\\media\\characters\\MK8_Bowser_Jr_Icon.png"
+			"image": "app\\media\\characters\\MK8_Bowser_Jr_Icon.png"
 		},
 		{
 			"name": "Lemmy",
 			"weight": "Light",
-			"image": "App\\media\\characters\\MK8_Lemmy_Icon.png"
+			"image": "app\\media\\characters\\MK8_Lemmy_Icon.png"
 		},
 		{
 			"name": "Larry",
 			"weight": "Light",
-			"image": "App\\media\\characters\\MK8_Larry_Icon.png"
+			"image": "app\\media\\characters\\MK8_Larry_Icon.png"
 		},
 		{
 			"name": "Wendy",
 			"weight": "Light",
-			"image": "App\\media\\characters\\MK8_Wendy_Icon.png"
+			"image": "app\\media\\characters\\MK8_Wendy_Icon.png"
 		},
 		{
 			"name": "Isabelle",
 			"weight": "Light",
-			"image": "App\\media\\characters\\MK8_Isabelle_Icon.png"
+			"image": "app\\media\\characters\\MK8_Isabelle_Icon.png"
 		},
 		{
 			"name": "Daisy",
 			"weight": "Medium",
-			"image": "App\\media\\characters\\MK8_Daisy_Icon.png"
+			"image": "app\\media\\characters\\MK8_Daisy_Icon.png"
 		},
 		{
 			"name": "Peach",
 			"weight": "Medium",
-			"image": "App\\media\\characters\\MK8_Peach_Icon.png"
+			"image": "app\\media\\characters\\MK8_Peach_Icon.png"
 		},
 		{
 			"name": "Yoshi",
 			"weight": "Medium",
-			"image": "App\\media\\characters\\MK8_Yoshi_Icon.png"
+			"image": "app\\media\\characters\\MK8_Yoshi_Icon.png"
 		},
 		{
 			"name": "Tanooki Mario",
 			"weight": "Medium",
-			"image": "App\\media\\characters\\MK8_Tanooki_Mario_Icon.png"
+			"image": "app\\media\\characters\\MK8_Tanooki_Mario_Icon.png"
 		},
 		{
 			"name": "Cat Peach",
 			"weight": "Medium",
-			"image": "App\\media\\characters\\MK8_Cat_Peach_Icon.png"
+			"image": "app\\media\\characters\\MK8_Cat_Peach_Icon.png"
 		},
 		{
 			"name": "Villager Boy",
 			"weight": "Medium",
-			"image": "App\\media\\characters\\VillagerMale-Icon-MK8.png"
+			"image": "app\\media\\characters\\VillagerMale-Icon-MK8.png"
 		},
 		{
 			"name": "Villager Girl",
 			"weight": "Medium",
-			"image": "App\\media\\characters\\VillagerFemale-Icon-MK8.png"
+			"image": "app\\media\\characters\\VillagerFemale-Icon-MK8.png"
 		},
 		{
 			"name": "Inkling Girl",
 			"weight": "Medium",
-			"image": "App\\media\\characters\\MK8DX_Female_Inkling_Icon.png"
+			"image": "app\\media\\characters\\MK8DX_Female_Inkling_Icon.png"
 		},
 		{
 			"name": "Inkling Boy",
 			"weight": "Medium",
-			"image": "App\\media\\characters\\MK8DX_Male_Inkling_Icon.png"
+			"image": "app\\media\\characters\\MK8DX_Male_Inkling_Icon.png"
 		},
 		{
 			"name": "Mario",
 			"weight": "Medium",
-			"image": "App\\media\\characters\\MK8_Mario_Icon.png"
+			"image": "app\\media\\characters\\MK8_Mario_Icon.png"
 		},
 		{
 			"name": "Luigi",
 			"weight": "Medium",
-			"image": "App\\media\\characters\\MK8_Luigi_Icon.png"
+			"image": "app\\media\\characters\\MK8_Luigi_Icon.png"
 		},
 		{
 			"name": "Ludwig",
 			"weight": "Medium",
-			"image": "App\\media\\characters\\MK8_Ludwig_Icon.png"
+			"image": "app\\media\\characters\\MK8_Ludwig_Icon.png"
 		},
 		{
 			"name": "Iggy",
 			"weight": "Medium",
-			"image": "App\\media\\characters\\MK8_Iggy_Icon.png"
+			"image": "app\\media\\characters\\MK8_Iggy_Icon.png"
 		},
 		{
 			"name": "Donkey Kong",
 			"weight": "Heavy",
-			"image": "App\\media\\characters\\MK8_DKong_Icon.png"
+			"image": "app\\media\\characters\\MK8_DKong_Icon.png"
 		},
 		{
 			"name": "Metal Mario",
 			"weight": "Heavy",
-			"image": "App\\media\\characters\\MK8_MMario_Icon.png"
+			"image": "app\\media\\characters\\MK8_MMario_Icon.png"
 		},
 		{
 			"name": "Pink Gold Peach",
 			"weight": "Heavy",
-			"image": "App\\media\\characters\\MK8_PGPeach_Icon.png"
+			"image": "app\\media\\characters\\MK8_PGPeach_Icon.png"
 		},
 		{
 			"name": "Rosalina",
 			"weight": "Heavy",
-			"image": "App\\media\\characters\\MK8_Rosalina_Icon.png"
+			"image": "app\\media\\characters\\MK8_Rosalina_Icon.png"
 		},
 		{
 			"name": "Roy",
 			"weight": "Heavy",
-			"image": "App\\media\\characters\\MK8_Roy_Icon.png"
+			"image": "app\\media\\characters\\MK8_Roy_Icon.png"
 		},
 		{
 			"name": "Waluigi",
 			"weight": "Heavy",
-			"image": "App\\media\\characters\\MK8_Waluigi_Icon.png"
+			"image": "app\\media\\characters\\MK8_Waluigi_Icon.png"
 		},
 		{
 			"name": "Link",
 			"weight": "Heavy",
-			"image": "App\\media\\characters\\MK8_Link_Icon.png"
+			"image": "app\\media\\characters\\MK8_Link_Icon.png"
 		},
 		{
 			"name": "King Boo",
 			"weight": "Heavy",
-			"image": "App\\media\\characters\\MK8DX_King_Boo_Icon.png"
+			"image": "app\\media\\characters\\MK8DX_King_Boo_Icon.png"
 		},
 		{
 			"name": "Bowser",
 			"weight": "Heavy",
-			"image": "App\\media\\characters\\MK8_Bowser_Icon.png"
+			"image": "app\\media\\characters\\MK8_Bowser_Icon.png"
 		},
 		{
 			"name": "Wario",
 			"weight": "Heavy",
-			"image": "App\\media\\characters\\MK8_Wario_Icon.png"
+			"image": "app\\media\\characters\\MK8_Wario_Icon.png"
 		},
 		{
 			"name": "Morton",
 			"weight": "Heavy",
-			"image": "App\\media\\characters\\MK8_Morton_Icon.png"
+			"image": "app\\media\\characters\\MK8_Morton_Icon.png"
 		},
 		{
 			"name": "Dry Bowser",
 			"weight": "Heavy",
-			"image": "App\\media\\characters\\MK8_Dry_Bowser_Icon.png"
+			"image": "app\\media\\characters\\MK8_Dry_Bowser_Icon.png"
 		}
 	]
 }

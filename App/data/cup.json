@@ -2,67 +2,67 @@
 	"cups": [
 		{
 			"name": "Mushroom Cup",
-			"image": "App\\media\\cups\\MK8_Mushroom_Cup_Emblem.png"
+			"image": "app\\media\\cups\\MK8_Mushroom_Cup_Emblem.png"
 		},
 		{
 			"name": "Flower Cup",
-			"image": "App\\media\\cups\\MK8_Flower_Cup_Emblem.png"
+			"image": "app\\media\\cups\\MK8_Flower_Cup_Emblem.png"
 		},
 		{
 			"name": "Star Cup",
-			"image": "App\\media\\cups\\MK8_Star_Cup_Emblem.png"
+			"image": "app\\media\\cups\\MK8_Star_Cup_Emblem.png"
 		},
 		{
 			"name": "Special Cup",
-			"image": "App\\media\\cups\\MK8_Special_Cup_Emblem.png"
+			"image": "app\\media\\cups\\MK8_Special_Cup_Emblem.png"
 		},
 		{
 			"name": "Egg Cup",
-			"image": "App\\media\\cups\\MK8_Egg_Cup_Emblem.png"
+			"image": "app\\media\\cups\\MK8_Egg_Cup_Emblem.png"
 		},
 		{
 			"name": "Crossing Cup",
-			"image": "App\\media\\cups\\MK8_Crossing_Cup_Emblem.png"
+			"image": "app\\media\\cups\\MK8_Crossing_Cup_Emblem.png"
 		},
 		{
 			"name": "Shell Cup",
-			"image": "App\\media\\cups\\MK8_Shell_Cup_Emblem.png"
+			"image": "app\\media\\cups\\MK8_Shell_Cup_Emblem.png"
 		},
 		{
 			"name": "Banana Cup",
-			"image": "App\\media\\cups\\MK8_Banana_Cup_Emblem.png"
+			"image": "app\\media\\cups\\MK8_Banana_Cup_Emblem.png"
 		},
 		{
 			"name": "Leaf Cup",
-			"image": "App\\media\\cups\\MK8_Leaf_Cup_Emblem.png"
+			"image": "app\\media\\cups\\MK8_Leaf_Cup_Emblem.png"
 		},
 		{
 			"name": "Lightning Cup",
-			"image": "App\\media\\cups\\MK8_Lightning_Cup_Emblem.png"
+			"image": "app\\media\\cups\\MK8_Lightning_Cup_Emblem.png"
 		},
 		{
 			"name": "Triforce Cup",
-			"image": "App\\media\\cups\\MK8_Triforce_Cup_Emblem.png"
+			"image": "app\\media\\cups\\MK8_Triforce_Cup_Emblem.png"
 		},
 		{
 			"name": "Bell Cup",
-			"image": "App\\media\\cups\\MK8_Bell_Cup_Emblem.png"
+			"image": "app\\media\\cups\\MK8_Bell_Cup_Emblem.png"
 		},
 		{
 			"name": "Golden Dash Cup",
-			"image": "App\\media\\cups\\MK8D_BCP_Golden_Dash_Emblem.png"
+			"image": "app\\media\\cups\\MK8D_BCP_Golden_Dash_Emblem.png"
 		},
 		{
 			"name": "Luck Cat Cup",
-			"image": "App\\media\\cups\\MK8D_BCP_Lucky_Cat_Emblem.png"
+			"image": "app\\media\\cups\\MK8D_BCP_Lucky_Cat_Emblem.png"
 		},
 		{
 			"name": "Turnip Cup",
-			"image": "App\\media\\cups\\MK8D_BCP_Turnip_Emblem.png"
+			"image": "app\\media\\cups\\MK8D_BCP_Turnip_Emblem.png"
 		},
 		{
 			"name": "Propeller Cup",
-			"image": "App\\media\\cups\\MK8D_BCP_Propeller_Emblem.png"
+			"image": "app\\media\\cups\\MK8D_BCP_Propeller_Emblem.png"
 		}
 	]
 }
