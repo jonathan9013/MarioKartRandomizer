@@ -200,14 +200,14 @@ def initialize():
 	global sportsBikes
 
 	# initialize tracks
-	file = open('App\\tracks.json')
+	file = open('App\data\\tracks.json')
 	trackData = json.load(file)
 	for i in trackData['tracks']:
 		tracks.append(track(i['name'], i['cup'], i['image']))
 	file.close()
 
 	# initialize characters
-	file = open('App\character.json')
+	file = open('App\data\character.json')
 	charData = json.load(file)
 	for i in charData['characters']:
 		if i['weight'] == 'Light':
@@ -219,14 +219,14 @@ def initialize():
 	file.close()
 
 	# initialize cups
-	file = open('App\cup.json')
+	file = open('App\data\cup.json')
 	cupData = json.load(file)
 	for i in cupData['cups']:
 		cups.append(cup(i['name'], i['image']))
 	file.close()
 
 	# initialize karts
-	file = open('App\karts.json')
+	file = open('App\data\karts.json')
 	kartData = json.load(file)
 	for i in kartData['karts']:
 		if i['style'] == 'Kart':
@@ -240,14 +240,14 @@ def initialize():
 	file.close()
 
 	# initialize gliders
-	file = open('App\gliders.json')
+	file = open('App\data\gliders.json')
 	gliderData = json.load(file)
 	for i in gliderData['gliders']:
 		gliders.append(glider(i['name'], i['image']))
 	file.close()
 
 	# initialize tires
-	file = open('App\\tires.json')
+	file = open('App\data\\tires.json')
 	tireData = json.load(file)
 	for i in tireData['tires']:
 		tires.append(tire(i['name'], i['image']))
