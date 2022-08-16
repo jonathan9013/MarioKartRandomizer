@@ -334,34 +334,34 @@ while True:
         window['track7'].update(visible=False)
         window['track8'].update(visible=False)
         numberOfTracks = gui.popup_get_text('Enter the number of tracks you would like to generate (up to 8): ', keep_on_top=True)
-        if numberOfTracks.isnumeric():
+        if numberOfTracks != None and numberOfTracks.isnumeric():
             numberOfTracks = int(numberOfTracks)
-        if numberOfTracks == 1:
-            randomizeTrack(False, int(values["resetInput"]))
-            currTrack = getCurrentTrack()
-            track_icon = currTrack.image
-            track_cup_text = currTrack.cup
-
-            window['track_image1'].update(filename=track_icon)
-            window['track_cup1'].update(track_cup_text)
-            window['track1'].update(visible=True)
-        else:
-            i = 1
-            while i<=numberOfTracks:
-                imageString = 'track_image'+str(i)
-                cupString = 'track_cup'+str(i)
-                columnString ='track'+str(i)
+            if numberOfTracks == 1:
                 randomizeTrack(False, int(values["resetInput"]))
                 currTrack = getCurrentTrack()
                 track_icon = currTrack.image
                 track_cup_text = currTrack.cup
 
-                window[imageString].update(filename=track_icon)
-                window[cupString].update(track_cup_text)
-                window[columnString].update(visible=True)
-                i=i+1
-        
-        window['track_reset'].update(getTrackReset())
+                window['track_image1'].update(filename=track_icon)
+                window['track_cup1'].update(track_cup_text)
+                window['track1'].update(visible=True)
+            else:
+                i = 1
+                while i<=numberOfTracks:
+                    imageString = 'track_image'+str(i)
+                    cupString = 'track_cup'+str(i)
+                    columnString ='track'+str(i)
+                    randomizeTrack(False, int(values["resetInput"]))
+                    currTrack = getCurrentTrack()
+                    track_icon = currTrack.image
+                    track_cup_text = currTrack.cup
+
+                    window[imageString].update(filename=track_icon)
+                    window[cupString].update(track_cup_text)
+                    window[columnString].update(visible=True)
+                    i=i+1
+            
+            window['track_reset'].update(getTrackReset())
 
     if event == '-GENLOADOUT-':
         type_array = [
