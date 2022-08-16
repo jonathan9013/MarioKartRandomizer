@@ -204,7 +204,7 @@ window = gui.Window('Mario Kart 8 Deluxe Randomizer', layout, resizable=True, ic
 # Event Loop to process "events" and get the "values" of the inputs
 while True:
     event, values = window.read()
-    if event == gui.WIN_CLOSED or event == 'Cancel': # if user closes window or clicks cancel
+    if event == gui.WIN_CLOSED: # if user closes window or clicks cancel
         break
     if event == '-REROLLCHAR-':
         randomizeAspect("character")
@@ -331,20 +331,21 @@ while True:
         if numberOfTracks.isnumeric():
             numberOfTracks = int(numberOfTracks)
         if numberOfTracks == 1:
-            randomizeTrack(False)
+            randomizeTrack(False, int(values["resetInput"]))
             currTrack = getCurrentTrack()
             track_icon = currTrack.image
             track_cup_text = currTrack.cup
 
             window['track_image1'].update(filename=track_icon)
             window['track_cup1'].update(track_cup_text)
+            window['track1'].update(visible=True)
         else:
             i = 1
             while i<=numberOfTracks:
                 imageString = 'track_image'+str(i)
                 cupString = 'track_cup'+str(i)
                 columnString ='track'+str(i)
-                randomizeTrack(False)
+                randomizeTrack(False, int(values["resetInput"]))
                 currTrack = getCurrentTrack()
                 track_icon = currTrack.image
                 track_cup_text = currTrack.cup
