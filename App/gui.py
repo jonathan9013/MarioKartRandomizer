@@ -199,7 +199,7 @@ layout = [
 ]
 
 # Create the Window
-window = gui.Window('Mario Kart 8 Deluxe Randomizer', layout, resizable=True, icon='App\media\window_icon.ico').Finalize()
+window = gui.Window('Mario Kart 8 Deluxe Randomizer', layout, resizable=True, icon='app\media\window_icon.ico').Finalize()
 
 # Event Loop to process "events" and get the "values" of the inputs
 while True:
