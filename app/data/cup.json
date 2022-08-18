@@ -1,0 +1,68 @@
+{
+	"cups": [
+		{
+			"name": "Mushroom Cup",
+			"image": "app\\media\\cups\\MK8_Mushroom_Cup_Emblem.png"
+		},
+		{
+			"name": "Flower Cup",
+			"image": "app\\media\\cups\\MK8_Flower_Cup_Emblem.png"
+		},
+		{
+			"name": "Star Cup",
+			"image": "app\\media\\cups\\MK8_Star_Cup_Emblem.png"
+		},
+		{
+			"name": "Special Cup",
+			"image": "app\\media\\cups\\MK8_Special_Cup_Emblem.png"
+		},
+		{
+			"name": "Egg Cup",
+			"image": "app\\media\\cups\\MK8_Egg_Cup_Emblem.png"
+		},
+		{
+			"name": "Crossing Cup",
+			"image": "app\\media\\cups\\MK8_Crossing_Cup_Emblem.png"
+		},
+		{
+			"name": "Shell Cup",
+			"image": "app\\media\\cups\\MK8_Shell_Cup_Emblem.png"
+		},
+		{
+			"name": "Banana Cup",
+			"image": "app\\media\\cups\\MK8_Banana_Cup_Emblem.png"
+		},
+		{
+			"name": "Leaf Cup",
+			"image": "app\\media\\cups\\MK8_Leaf_Cup_Emblem.png"
+		},
+		{
+			"name": "Lightning Cup",
+			"image": "app\\media\\cups\\MK8_Lightning_Cup_Emblem.png"
+		},
+		{
+			"name": "Triforce Cup",
+			"image": "app\\media\\cups\\MK8_Triforce_Cup_Emblem.png"
+		},
+		{
+			"name": "Bell Cup",
+			"image": "app\\media\\cups\\MK8_Bell_Cup_Emblem.png"
+		},
+		{
+			"name": "Golden Dash Cup",
+			"image": "app\\media\\cups\\MK8D_BCP_Golden_Dash_Emblem.png"
+		},
+		{
+			"name": "Luck Cat Cup",
+			"image": "app\\media\\cups\\MK8D_BCP_Lucky_Cat_Emblem.png"
+		},
+		{
+			"name": "Turnip Cup",
+			"image": "app\\media\\cups\\MK8D_BCP_Turnip_Emblem.png"
+		},
+		{
+			"name": "Propeller Cup",
+			"image": "app\\media\\cups\\MK8D_BCP_Propeller_Emblem.png"
+		}
+	]
+}

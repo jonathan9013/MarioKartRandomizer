@@ -1,0 +1,209 @@
+{
+	"karts": [
+		{
+			"name": "Bone Rattler",
+			"image": "app\\media\\atvs\\MK8BoneRattler.png",
+			"style": "ATV"
+		},
+		{
+			"name": "Inkstriker",
+			"image": "app\\media\\atvs\\MK8DX_Inkstriker.png",
+			"style": "ATV"
+		},
+		{
+			"name": "Splat Buggy",
+			"image": "app\\media\\atvs\\MK8DX_Splat_Buggy.png",
+			"style": "ATV"
+		},
+		{
+			"name": "Standard ATV",
+			"image": "app\\media\\atvs\\StandardATVBodyMK8.png",
+			"style": "ATV"
+		},
+		{
+			"name": "Teddy Buggy",
+			"image": "app\\media\\atvs\\TeddyBuggyBodyMK8.png",
+			"style": "ATV"
+		},
+		{
+			"name": "Wild Wiggler",
+			"image": "app\\media\\atvs\\WildWigglerBodyMK8.png",
+			"style": "ATV"
+		},
+		{
+			"name": "Flame Rider",
+			"image": "app\\media\\bikes\\FlameRiderBodyMK8.png",
+			"style": "Bike"
+		},
+		{
+			"name": "City Tripper",
+			"image": "app\\media\\bikes\\MK8_Light-Green_City_Tripper.png",
+			"style": "Bike"
+		},
+		{
+			"name": "Master Cycle Zero",
+			"image": "app\\media\\bikes\\MK8D_Master_Cycle_Zero.png",
+			"style": "Bike"
+		},
+		{
+			"name": "Mr. Scooty",
+			"image": "app\\media\\bikes\\MrScootyBodyMK8.png",
+			"style": "Bike"
+		},
+		{
+			"name": "Standard Bike",
+			"image": "app\\media\\bikes\\StandardBikeBodyMK8.png",
+			"style": "Bike"
+		},
+		{
+			"name": "The Duke",
+			"image": "app\\media\\bikes\\TheDukeBodyMK8.png",
+			"style": "Bike"
+		},
+		{
+			"name": "Varmint",
+			"image": "app\\media\\bikes\\VarmintBodyMK8.png",
+			"style": "Bike"
+		},
+		{
+			"name": "Comet",
+			"image": "app\\media\\sport_bikes\\CometBodyMK8.png",
+			"style": "Sport Bike"
+		},
+		{
+			"name": "Jet Bike",
+			"image": "app\\media\\sport_bikes\\JetBikeBodyMK8.png",
+			"style": "Sport Bike"
+		},
+		{
+			"name": "Master Cycle",
+			"image": "app\\media\\sport_bikes\\MK8MasterCycle.png",
+			"style": "Sport Bike"
+		},
+		{
+			"name": "Sport Bike",
+			"image": "app\\media\\sport_bikes\\SportBikeBodyMK8.png",
+			"style": "Sport Bike"
+		},
+		{
+			"name": "Yoshi Bike",
+			"image": "app\\media\\sport_bikes\\YoshiBikeBodyMK8.png",
+			"style": "Sport Bike"
+		},
+		{
+			"name": "300 SL Roadster",
+			"image": "app\\media\\karts\\300SLRoadster_MK8.png",
+			"style": "Kart"
+		},
+		{
+			"name": "Badwagon",
+			"image": "app\\media\\karts\\BadwagonBodyMK8.png",
+			"style": "KartKart"
+		},
+		{
+			"name": "Biddybuggy",
+			"image": "app\\media\\karts\\BiddybuggyBodyMK8.png",
+			"style": "Kart"
+		},
+		{
+			"name": "Cat Cruiser",
+			"image": "app\\media\\karts\\CatCruiserBodyMK8.png",
+			"style": "Kart"
+		},
+		{
+			"name": "Circuit Special",
+			"image": "app\\media\\karts\\CircuitSpecialBodyMK8.png",
+			"style": "Kart"
+		},
+		{
+			"name": "GLA",
+			"image": "app\\media\\karts\\GLA-MK8.png",
+			"style": "Kart"
+		},
+		{
+			"name": "Gold Standard",
+			"image": "app\\media\\karts\\Gold_Standard.png",
+			"style": "Kart"
+		},
+		{
+			"name": "Landship",
+			"image": "app\\media\\karts\\LandshipBodyMK8.png",
+			"style": "Kart"
+		},
+		{
+			"name": "Mach 8",
+			"image": "app\\media\\karts\\Mach8BodyMK8.png",
+			"style": "Kart"
+		},
+		{
+			"name": "Tanooki Kart",
+			"image": "app\\media\\karts\\MK8_Tanooki_Buggy_Sprite.png",
+			"style": "Kart"
+		},
+		{
+			"name": "Blue Falcon",
+			"image": "app\\media\\karts\\MK8BlueFalcon.png",
+			"style": "Kart"
+		},
+		{
+			"name": "Koopa Clown",
+			"image": "app\\media\\karts\\MK8DX_Koopa_Clown.png",
+			"style": "Kart"
+		},
+		{
+			"name": "P-Wing",
+			"image": "app\\media\\karts\\MK8PWing.png",
+			"style": "Kart"
+		},
+		{
+			"name": "Streetle",
+			"image": "app\\media\\karts\\MK8Streetle.png",
+			"style": "Kart"
+		},
+		{
+			"name": "Pipe Frame",
+			"image": "app\\media\\karts\\PipeFrameBodyMK8.png",
+			"style": "Kart"
+		},
+		{
+			"name": "Prancer",
+			"image": "app\\media\\karts\\PrancerBodyMK8.png",
+			"style": "Kart"
+		},
+		{
+			"name": "Sneeker",
+			"image": "app\\media\\karts\\SneakerBodyMK8.png",
+			"style": "Kart"
+		},
+		{
+			"name": "Sports Coupe",
+			"image": "app\\media\\karts\\SportsCoupeMK8.png",
+			"style": "Kart"
+		},
+		{
+			"name": "Standard Kart",
+			"image": "app\\media\\karts\\StandardKartBodyMK8.png",
+			"style": "Kart"
+		},
+		{
+			"name": "Steel Driver",
+			"image": "app\\media\\karts\\Steel_Driver.png",
+			"style": "Kart"
+		},
+		{
+			"name": "Tri-Speeder",
+			"image": "app\\media\\karts\\TrispeederBodyMK8.png",
+			"style": "Kart"
+		},
+		{
+			"name": "W 25 Silver Arrow",
+			"image": "app\\media\\karts\\W25SilverArrow-MK8.png",
+			"style": "Kart"
+		},
+		{
+			"name": "B Dasher",
+			"image": "app\\media\\karts\\ZeldaMK8Bdasher.png",
+			"style": "Kart"
+		}
+	]
+}
