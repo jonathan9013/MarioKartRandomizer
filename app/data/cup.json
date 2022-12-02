@@ -63,6 +63,14 @@
 		{
 			"name": "Propeller Cup",
 			"image": "app\\media\\cups\\MK8D_BCP_Propeller_Emblem.png"
+		},
+		{
+			"name": "Rock Cup",
+			"image": "app\\media\\cups\\MK8D_BCP_Rock_Emblem.png"
+		},
+		{
+			"name": "Moon Cup",
+			"image": "app\\media\\cups\\MK8D_BCP_Moon_Emblem.png"
 		}
 	]
 }
