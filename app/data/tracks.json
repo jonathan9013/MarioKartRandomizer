@@ -317,6 +317,46 @@
 			"name": "Sky-High Sundae",
 			"cup": "Propeller Cup",
 			"image": "app\\media\\tracks\\MK8D_Sky-High_Sundae_Course_Icon.png"
+		},
+		{
+			"name": "London Loop",
+			"cup": "Rock Cup",
+			"image": "app\\media\\tracks\\MK8D_Tour_London_Loop_Course_Icon.png"
+		},
+		{
+			"name": "Boo Lake",
+			"cup": "Rock Cup",
+			"image": "app\\media\\tracks\\MK8D_GBA_Boo_Lake_Course_Icon.png"
+		},
+		{
+			"name": "Rock Rock Mountain",
+			"cup": "Rock Cup",
+			"image": "app\\media\\tracks\\MK8D_3DS_Rock_Rock_Mountain_Course_Icon.png"
+		},
+		{
+			"name": "Mapple Treeway",
+			"cup": "Rock Cup",
+			"image": "app\\media\\tracks\\MK8D_Wii_Maple_Treeway_Course_Icon.png"
+		},
+		{
+			"name": "Berlin Byways",
+			"cup": "Moon Cup",
+			"image": "app\\media\\tracks\\MK8D_Tour_Berlin_Byways_Course_Icon.png"
+		},
+		{
+			"name": "Peach Gardens",
+			"cup": "Moon Cup",
+			"image": "app\\media\\tracks\\MK8D_DS_Peach_Gardens_Course_Icon.png"
+		},
+		{
+			"name": "Merry Mountain",
+			"cup": "Moon Cup",
+			"image": "app\\media\\tracks\\MK8D_Merry_Mountain_Course_Icon.png"
+		},
+		{
+			"name": "Rainbow Road 3DS",
+			"cup": "Moon Cup",
+			"image": "app\\media\\tracks\\MK8D_3DS_Rainbow_Road_Course_Icon.png"
 		}
 	]
 }
