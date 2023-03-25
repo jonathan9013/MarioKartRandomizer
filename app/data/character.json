@@ -146,6 +146,11 @@
 			"image": "app\\media\\characters\\MK8_Iggy_Icon.png"
 		},
 		{
+			"name": "Birdo",
+			"weight": "Medium",
+			"image": "app\\media\\characters\\MK8D_Birdo_Icon.png"
+		},
+		{
 			"name": "Donkey Kong",
 			"weight": "Heavy",
 			"image": "app\\media\\characters\\MK8_DKong_Icon.png"
