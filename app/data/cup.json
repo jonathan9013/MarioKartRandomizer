@@ -71,6 +71,14 @@
 		{
 			"name": "Moon Cup",
 			"image": "app\\media\\cups\\MK8D_BCP_Moon_Emblem.png"
+		},
+		{
+			"name": "Fruit Cup",
+			"image": "app\\media\\cups\\MK8D_BCP_Fruit_Emblem.png"
+		},
+		{
+			"name": "Boomerang Cup",
+			"image": "app\\media\\cups\\MK8D_BCP_Boomerang_Emblem.png"
 		}
 	]
 }
