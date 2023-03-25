@@ -1,2 +1,4 @@
+# Packages required for MarioKartRandomizer
+
 pysimplegui
 Pillow

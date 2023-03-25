@@ -1,362 +1,404 @@
 {
-	"tracks": [
-		{
-			"name": "Mario Kart Stadium",
-			"cup": "Mushroom Cup",
-			"image": "app\\media\\tracks\\MK8_Mario_Kart_Stadium_Course_Icon.png"
-		},
-		{
-			"name": "Water Park",
-			"cup": "Mushroom Cup",
-			"image": "app\\media\\tracks\\MK8_Water_Park_Course_Icon.png"
-		},
-		{
-			"name": "Sweet Sweet Canyon",
-			"cup": "Mushroom Cup",
-			"image": "app\\media\\tracks\\MK8_Sweet_Sweet_Canyon_Course_Icon.png"
-		},
-		{
-			"name": "Thwomp Ruins",
-			"cup": "Mushroom Cup",
-			"image": "app\\media\\tracks\\MK8_Thwomp_Ruins_Course_Icon.png"
-		},
-		{
-			"name": "Mario Circuit",
-			"cup": "Flower Cup",
-			"image": "app\\media\\tracks\\MK8_Mario_Circuit_Course_Icon.png"
-		},
-		{
-			"name": "Toad Harbor",
-			"cup": "Flower Cup",
-			"image": "app\\media\\tracks\\MK8_Toad_Harbor_Course_Icon.png"
-		},
-		{
-			"name": "Twisted Mansion",
-			"cup": "Flower Cup",
-			"image": "app\\media\\tracks\\MK8_Twisted_Mansion_Course_Icon.png"
-		},
-		{
-			"name": "Shy Guy Falls",
-			"cup": "Flower Cup",
-			"image": "app\\media\\tracks\\MK8_Shy_Guy_Falls_Course_Icon.png"
-		},
-		{
-			"name": "Sunshine Airport",
-			"cup": "Star Cup",
-			"image": "app\\media\\tracks\\MK8_Sunshine_Airport_Course_Icon.png"
-		},
-		{
-			"name": "Dolphin Shoals",
-			"cup": "Star Cup",
-			"image": "app\\media\\tracks\\MK8_Dolphin_Shoals_Course_Icon.png"
-		},
-		{
-			"name": "Electrodome",
-			"cup": "Star Cup",
-			"image": "app\\media\\tracks\\MK8_Electrodrome_Course_Icon.png"
-		},
-		{
-			"name": "Mount Wario",
-			"cup": "Star Cup",
-			"image": "app\\media\\tracks\\MK8_Mount_Wario_Course_Icon.png"
-		},
-		{
-			"name": "Cloudtop Cruise",
-			"cup": "Special Cup",
-			"image": "app\\media\\tracks\\MK8_Cloudtop_Cruise_Course_Icon.png"
-		},
-		{
-			"name": "Bone-Dry Dunes",
-			"cup": "Special Cup",
-			"image": "app\\media\\tracks\\MK8_Bone-Dry_Dunes_Course_Icon.png"
-		},
-		{
-			"name": "Bowser's Castle",
-			"cup": "Special Cup",
-			"image": "app\\media\\tracks\\MK8_Bowser's_Castle_Course_Icon.png"
-		},
-		{
-			"name": "Rainbow Road",
-			"cup": "Special Cup",
-			"image": "app\\media\\tracks\\MK8_Rainbow_Road_Course_Icon.png"
-		},
-		{
-			"name": "Yoshi Circuit GCN",
-			"cup": "Egg Cup",
-			"image": "app\\media\\tracks\\MK8_GCN_Yoshi_Circuit_Course_Icon.png"
-		},
-		{
-			"name": "Excitebike Arena",
-			"cup": "Egg Cup",
-			"image": "app\\media\\tracks\\MK8_Excitebike_Arena_Course_Icon.png"
-		},
-		{
-			"name": "Dragon Driftway",
-			"cup": "Egg Cup",
-			"image": "app\\media\\tracks\\MK8_Dragon_Driftway_Course_Icon.png"
-		},
-		{
-			"name": "Mute City",
-			"cup": "Egg Cup",
-			"image": "app\\media\\tracks\\MK8_Mute_City_Course_Icon.png"
-		},
-		{
-			"name": "Baby Park GCN",
-			"cup": "Crossing Cup",
-			"image": "app\\media\\tracks\\MK8_GCN_Baby_Park_Course_Icon.png"
-		},
-		{
-			"name": "Cheese Land GCN",
-			"cup": "Crossing Cup",
-			"image": "app\\media\\tracks\\MK8_GBA_Cheese_Land_Course_Icon.png"
-		},
-		{
-			"name": "Wild Woods",
-			"cup": "Crossing Cup",
-			"image": "app\\media\\tracks\\MK8_Wild_Woods_Course_Icon.png"
-		},
-		{
-			"name": "Animal Crossing",
-			"cup": "Crossing Cup",
-			"image": "app\\media\\tracks\\MK8_Animal_Crossing_Course_Icon.png"
-		},{
-			"name": "Moo Moo Meadows Wii",
-			"cup": "Shell Cup",
-			"image": "app\\media\\tracks\\MK8_Wii_Moo_Moo_Meadows_Course_Icon.png"
-		},
-		{
-			"name": "Mario Circuit GBA",
-			"cup": "Shell Cup",
-			"image": "app\\media\\tracks\\MK8_GBA_Mario_Circuit_Course_Icon.png"
-		},
-		{
-			"name": "Cheep Cheep Beach DS",
-			"cup": "Shell Cup",
-			"image": "app\\media\\tracks\\MK8_DS_Cheep_Cheep_Beach_Course_Icon.png"
-		},
-		{
-			"name": "Toad's Turnpike N64",
-			"cup": "Shell Cup",
-			"image": "app\\media\\tracks\\MK8_N64_Toad's_Turnpike_Course_Icon.png"
-		},
-		{
-			"name": "Dry Dry Desert GCN",
-			"cup": "Banana Cup",
-			"image": "app\\media\\tracks\\MK8_GCN_Dry_Dry_Desert_Course_Icon.png"
-		},
-		{
-			"name": "Donut Plains 3 SNES",
-			"cup": "Banana Cup",
-			"image": "app\\media\\tracks\\MK8_SNES_Donut_Plains_3_Course_Icon.png"
-		},
-		{
-			"name": "Royal Raceway N64",
-			"cup": "Banana Cup",
-			"image": "app\\media\\tracks\\MK8_N64_Royal_Raceway_Course_Icon.png"
-		},
-		{
-			"name": "DK Jungle 3DS",
-			"cup": "Banana Cup",
-			"image": "app\\media\\tracks\\MK8_3DS_DK_Jungle_Course_Icon.png"
-		},{
-			"name": "Wario Stadium DS",
-			"cup": "Leaf Cup",
-			"image": "app\\media\\tracks\\MK8_DS_Wario_Stadium_Course_Icon.png"
-		},
-		{
-			"name": "Sherbert Land GCN",
-			"cup": "Leaf Cup",
-			"image": "app\\media\\tracks\\MK8_GCN_Sherbet_Land_Course_Icon.png"
-		},
-		{
-			"name": "Music Park 3DS",
-			"cup": "Leaf Cup",
-			"image": "app\\media\\tracks\\MK8_3DS_Music_Park_Course_Icon.png"
-		},
-		{
-			"name": "Yoshi Valley N64",
-			"cup": "Leaf Cup",
-			"image": "app\\media\\tracks\\MK8_N64_Yoshi_Valley_Course_Icon.png"
-		},
-		{
-			"name": "Tick-Tock Clock DS",
-			"cup": "Lightning Cup",
-			"image": "app\\media\\tracks\\MK8_DS_Tick-Tock_Clock_Course_Icon.png"
-		},
-		{
-			"name": "Piranha Plant Slide 3DS",
-			"cup": "Lightning Cup",
-			"image": "app\\media\\tracks\\MK8_3DS_Piranha_Plant_Slide_Course_Icon.png"
-		},
-		{
-			"name": "Grumble Volcano Wii",
-			"cup": "Lightning Cup",
-			"image": "app\\media\\tracks\\MK8_Wii_Grumble_Volcano_Course_Icon.png"
-		},
-		{
-			"name": "Rainbow Road N64",
-			"cup": "Lightning Cup",
-			"image": "app\\media\\tracks\\MK8_N64_Rainbow_Road_Course_Icon.png"
-		},
-		{
-			"name": "Wario's Gold Mine Wii",
-			"cup": "Triforce Cup",
-			"image": "app\\media\\tracks\\MK8_Wii_Wario's_Gold_Mine_Course_Icon.png"
-		},
-		{
-			"name": "Rainbow Road SNES",
-			"cup": "Triforce Cup",
-			"image": "app\\media\\tracks\\MK8_SNES_Rainbow_Road_Course_Icon.png"
-		},
-		{
-			"name": "Ice Ice Outpost",
-			"cup": "Triforce Cup",
-			"image": "app\\media\\tracks\\MK8_Ice_Ice_Outpost_Course_Icon.png"
-		},
-		{
-			"name": "Hyrule Circuit",
-			"cup": "Triforce Cup",
-			"image": "app\\media\\tracks\\MK8_Hyrule_Circuit_Course_Icon.png"
-		},
-		{
-			"name": "Neo Bowser City 3DS",
-			"cup": "Bell Cup",
-			"image": "app\\media\\tracks\\MK8_3DS_Neo_Bowser_City_Course_Icon.png"
-		},
-		{
-			"name": "Ribbon Road GBA",
-			"cup": "Bell Cup",
-			"image": "app\\media\\tracks\\MK8_GBA_Ribbon_Road_Course_Icon.png"
-		},
-		{
-			"name": "Super Bell Subway",
-			"cup": "Bell Cup",
-			"image": "app\\media\\tracks\\MK8_Super_Bell_Subway_Course_Icon.png"
-		},
-		{
-			"name": "Big Blue",
-			"cup": "Bell Cup",
-			"image": "app\\media\\tracks\\MK8_Big_Blue_Course_Icon.png"
-		},
-		{
-			"name": "Paris Promenade Tour",
-			"cup": "Golden Dash Cup",
-			"image": "app\\media\\tracks\\MK8D_Tour_Paris_Promenade_Course_Icon.png"
-		},
-		{
-			"name": "Toad Circuit 3DS",
-			"cup": "Golden Dash Cup",
-			"image": "app\\media\\tracks\\MK8D_3DS_Toad_Circuit_Course_Icon.png"
-		},
-		{
-			"name": "Choco Mountain N64",
-			"cup": "Golden Dash Cup",
-			"image": "app\\media\\tracks\\MK8D_N64_Choco_Mountain_Course_Icon.png"
-		},
-		{
-			"name": "Coconut Mall Wii",
-			"cup": "Golden Dash Cup",
-			"image": "app\\media\\tracks\\MK8D_Wii_Coconut_Mall_Course_Icon.png"
-		},
-		{
-			"name": "Tokyo Blur Tour",
-			"cup": "Lucky Cat Cup",
-			"image": "app\\media\\tracks\\MK8D_Tour_Tokyo_Blur_Course_Icon.png"
-		},
-		{
-			"name": "Shroom Ridge DS",
-			"cup": "Lucky Cat Cup",
-			"image": "app\\media\\tracks\\MK8D_DS_Shroom_Ridge_Course_Icon.png"
-		},
-		{
-			"name": "Sky Garden GBA",
-			"cup": "Lucky Cat Cup",
-			"image": "app\\media\\tracks\\MK8D_GBA_Sky_Garden_Course_Icon.png"
-		},
-		{
-			"name": "Ninja Hideaway",
-			"cup": "Lucky Cat Cup",
-			"image": "app\\media\\tracks\\MK8D_Ninja_Hideaway_Course_Icon.png"
-		},
-		{
-			"name": "New York Minute Tour",
-			"cup": "Turnip Cup",
-			"image": "app\\media\\tracks\\MK8D_Tour_New_York_Minute_Course_Icon.png"
-		},
-		{
-			"name": "Mario Circuit 3 SNES",
-			"cup": "Turnip Cup",
-			"image": "app\\media\\tracks\\MK8D_SNES_Mario_Circuit_3_Course_Icon.png"
-		},
-		{
-			"name": "Kalamari Desert N64",
-			"cup": "Turnip Cup",
-			"image": "app\\media\\tracks\\MK8D_N64_Kalimari_Desert_Course_Icon.png"
-		},
-		{
-			"name": "Waluigi Pinball DS",
-			"cup": "Turnip Cup",
-			"image": "app\\media\\tracks\\MK8D_DS_Waluigi_Pinball_Course_Icon.png"
-		},
-		{
-			"name": "Sydney Sprint Tour",
-			"cup": "Propeller Cup",
-			"image": "app\\media\\tracks\\MK8D_Tour_Sydney_Sprint_Course_Icon.png"
-		},
-		{
-			"name": "Snow Land GBA",
-			"cup": "Propeller Cup",
-			"image": "app\\media\\tracks\\MK8D_GBA_Snow_Land_Course_Icon.png"
-		},
-		{
-			"name": "Mushroom Gorge Wii",
-			"cup": "Propeller Cup",
-			"image": "app\\media\\tracks\\MK8D_Wii_Mushroom_Gorge_Course_Icon.png"
-		},
-		{
-			"name": "Sky-High Sundae",
-			"cup": "Propeller Cup",
-			"image": "app\\media\\tracks\\MK8D_Sky-High_Sundae_Course_Icon.png"
-		},
-		{
-			"name": "London Loop",
-			"cup": "Rock Cup",
-			"image": "app\\media\\tracks\\MK8D_Tour_London_Loop_Course_Icon.png"
-		},
-		{
-			"name": "Boo Lake",
-			"cup": "Rock Cup",
-			"image": "app\\media\\tracks\\MK8D_GBA_Boo_Lake_Course_Icon.png"
-		},
-		{
-			"name": "Rock Rock Mountain",
-			"cup": "Rock Cup",
-			"image": "app\\media\\tracks\\MK8D_3DS_Rock_Rock_Mountain_Course_Icon.png"
-		},
-		{
-			"name": "Mapple Treeway",
-			"cup": "Rock Cup",
-			"image": "app\\media\\tracks\\MK8D_Wii_Maple_Treeway_Course_Icon.png"
-		},
-		{
-			"name": "Berlin Byways",
-			"cup": "Moon Cup",
-			"image": "app\\media\\tracks\\MK8D_Tour_Berlin_Byways_Course_Icon.png"
-		},
-		{
-			"name": "Peach Gardens",
-			"cup": "Moon Cup",
-			"image": "app\\media\\tracks\\MK8D_DS_Peach_Gardens_Course_Icon.png"
-		},
-		{
-			"name": "Merry Mountain",
-			"cup": "Moon Cup",
-			"image": "app\\media\\tracks\\MK8D_Merry_Mountain_Course_Icon.png"
-		},
-		{
-			"name": "Rainbow Road 3DS",
-			"cup": "Moon Cup",
-			"image": "app\\media\\tracks\\MK8D_3DS_Rainbow_Road_Course_Icon.png"
-		}
-	]
+  "tracks": [
+    {
+      "name": "Mario Kart Stadium",
+      "cup": "Mushroom Cup",
+      "image": "app\\media\\tracks\\MK8_Mario_Kart_Stadium_Course_Icon.png"
+    },
+    {
+      "name": "Water Park",
+      "cup": "Mushroom Cup",
+      "image": "app\\media\\tracks\\MK8_Water_Park_Course_Icon.png"
+    },
+    {
+      "name": "Sweet Sweet Canyon",
+      "cup": "Mushroom Cup",
+      "image": "app\\media\\tracks\\MK8_Sweet_Sweet_Canyon_Course_Icon.png"
+    },
+    {
+      "name": "Thwomp Ruins",
+      "cup": "Mushroom Cup",
+      "image": "app\\media\\tracks\\MK8_Thwomp_Ruins_Course_Icon.png"
+    },
+    {
+      "name": "Mario Circuit",
+      "cup": "Flower Cup",
+      "image": "app\\media\\tracks\\MK8_Mario_Circuit_Course_Icon.png"
+    },
+    {
+      "name": "Toad Harbor",
+      "cup": "Flower Cup",
+      "image": "app\\media\\tracks\\MK8_Toad_Harbor_Course_Icon.png"
+    },
+    {
+      "name": "Twisted Mansion",
+      "cup": "Flower Cup",
+      "image": "app\\media\\tracks\\MK8_Twisted_Mansion_Course_Icon.png"
+    },
+    {
+      "name": "Shy Guy Falls",
+      "cup": "Flower Cup",
+      "image": "app\\media\\tracks\\MK8_Shy_Guy_Falls_Course_Icon.png"
+    },
+    {
+      "name": "Sunshine Airport",
+      "cup": "Star Cup",
+      "image": "app\\media\\tracks\\MK8_Sunshine_Airport_Course_Icon.png"
+    },
+    {
+      "name": "Dolphin Shoals",
+      "cup": "Star Cup",
+      "image": "app\\media\\tracks\\MK8_Dolphin_Shoals_Course_Icon.png"
+    },
+    {
+      "name": "Electrodome",
+      "cup": "Star Cup",
+      "image": "app\\media\\tracks\\MK8_Electrodrome_Course_Icon.png"
+    },
+    {
+      "name": "Mount Wario",
+      "cup": "Star Cup",
+      "image": "app\\media\\tracks\\MK8_Mount_Wario_Course_Icon.png"
+    },
+    {
+      "name": "Cloudtop Cruise",
+      "cup": "Special Cup",
+      "image": "app\\media\\tracks\\MK8_Cloudtop_Cruise_Course_Icon.png"
+    },
+    {
+      "name": "Bone-Dry Dunes",
+      "cup": "Special Cup",
+      "image": "app\\media\\tracks\\MK8_Bone-Dry_Dunes_Course_Icon.png"
+    },
+    {
+      "name": "Bowser's Castle",
+      "cup": "Special Cup",
+      "image": "app\\media\\tracks\\MK8_Bowser's_Castle_Course_Icon.png"
+    },
+    {
+      "name": "Rainbow Road",
+      "cup": "Special Cup",
+      "image": "app\\media\\tracks\\MK8_Rainbow_Road_Course_Icon.png"
+    },
+    {
+      "name": "Yoshi Circuit GCN",
+      "cup": "Egg Cup",
+      "image": "app\\media\\tracks\\MK8_GCN_Yoshi_Circuit_Course_Icon.png"
+    },
+    {
+      "name": "Excitebike Arena",
+      "cup": "Egg Cup",
+      "image": "app\\media\\tracks\\MK8_Excitebike_Arena_Course_Icon.png"
+    },
+    {
+      "name": "Dragon Driftway",
+      "cup": "Egg Cup",
+      "image": "app\\media\\tracks\\MK8_Dragon_Driftway_Course_Icon.png"
+    },
+    {
+      "name": "Mute City",
+      "cup": "Egg Cup",
+      "image": "app\\media\\tracks\\MK8_Mute_City_Course_Icon.png"
+    },
+    {
+      "name": "Baby Park GCN",
+      "cup": "Crossing Cup",
+      "image": "app\\media\\tracks\\MK8_GCN_Baby_Park_Course_Icon.png"
+    },
+    {
+      "name": "Cheese Land GCN",
+      "cup": "Crossing Cup",
+      "image": "app\\media\\tracks\\MK8_GBA_Cheese_Land_Course_Icon.png"
+    },
+    {
+      "name": "Wild Woods",
+      "cup": "Crossing Cup",
+      "image": "app\\media\\tracks\\MK8_Wild_Woods_Course_Icon.png"
+    },
+    {
+      "name": "Animal Crossing",
+      "cup": "Crossing Cup",
+      "image": "app\\media\\tracks\\MK8_Animal_Crossing_Course_Icon.png"
+    },
+    {
+      "name": "Moo Moo Meadows Wii",
+      "cup": "Shell Cup",
+      "image": "app\\media\\tracks\\MK8_Wii_Moo_Moo_Meadows_Course_Icon.png"
+    },
+    {
+      "name": "Mario Circuit GBA",
+      "cup": "Shell Cup",
+      "image": "app\\media\\tracks\\MK8_GBA_Mario_Circuit_Course_Icon.png"
+    },
+    {
+      "name": "Cheep Cheep Beach DS",
+      "cup": "Shell Cup",
+      "image": "app\\media\\tracks\\MK8_DS_Cheep_Cheep_Beach_Course_Icon.png"
+    },
+    {
+      "name": "Toad's Turnpike N64",
+      "cup": "Shell Cup",
+      "image": "app\\media\\tracks\\MK8_N64_Toad's_Turnpike_Course_Icon.png"
+    },
+    {
+      "name": "Dry Dry Desert GCN",
+      "cup": "Banana Cup",
+      "image": "app\\media\\tracks\\MK8_GCN_Dry_Dry_Desert_Course_Icon.png"
+    },
+    {
+      "name": "Donut Plains 3 SNES",
+      "cup": "Banana Cup",
+      "image": "app\\media\\tracks\\MK8_SNES_Donut_Plains_3_Course_Icon.png"
+    },
+    {
+      "name": "Royal Raceway N64",
+      "cup": "Banana Cup",
+      "image": "app\\media\\tracks\\MK8_N64_Royal_Raceway_Course_Icon.png"
+    },
+    {
+      "name": "DK Jungle 3DS",
+      "cup": "Banana Cup",
+      "image": "app\\media\\tracks\\MK8_3DS_DK_Jungle_Course_Icon.png"
+    },
+    {
+      "name": "Wario Stadium DS",
+      "cup": "Leaf Cup",
+      "image": "app\\media\\tracks\\MK8_DS_Wario_Stadium_Course_Icon.png"
+    },
+    {
+      "name": "Sherbert Land GCN",
+      "cup": "Leaf Cup",
+      "image": "app\\media\\tracks\\MK8_GCN_Sherbet_Land_Course_Icon.png"
+    },
+    {
+      "name": "Music Park 3DS",
+      "cup": "Leaf Cup",
+      "image": "app\\media\\tracks\\MK8_3DS_Music_Park_Course_Icon.png"
+    },
+    {
+      "name": "Yoshi Valley N64",
+      "cup": "Leaf Cup",
+      "image": "app\\media\\tracks\\MK8_N64_Yoshi_Valley_Course_Icon.png"
+    },
+    {
+      "name": "Tick-Tock Clock DS",
+      "cup": "Lightning Cup",
+      "image": "app\\media\\tracks\\MK8_DS_Tick-Tock_Clock_Course_Icon.png"
+    },
+    {
+      "name": "Piranha Plant Slide 3DS",
+      "cup": "Lightning Cup",
+      "image": "app\\media\\tracks\\MK8_3DS_Piranha_Plant_Slide_Course_Icon.png"
+    },
+    {
+      "name": "Grumble Volcano Wii",
+      "cup": "Lightning Cup",
+      "image": "app\\media\\tracks\\MK8_Wii_Grumble_Volcano_Course_Icon.png"
+    },
+    {
+      "name": "Rainbow Road N64",
+      "cup": "Lightning Cup",
+      "image": "app\\media\\tracks\\MK8_N64_Rainbow_Road_Course_Icon.png"
+    },
+    {
+      "name": "Wario's Gold Mine Wii",
+      "cup": "Triforce Cup",
+      "image": "app\\media\\tracks\\MK8_Wii_Wario's_Gold_Mine_Course_Icon.png"
+    },
+    {
+      "name": "Rainbow Road SNES",
+      "cup": "Triforce Cup",
+      "image": "app\\media\\tracks\\MK8_SNES_Rainbow_Road_Course_Icon.png"
+    },
+    {
+      "name": "Ice Ice Outpost",
+      "cup": "Triforce Cup",
+      "image": "app\\media\\tracks\\MK8_Ice_Ice_Outpost_Course_Icon.png"
+    },
+    {
+      "name": "Hyrule Circuit",
+      "cup": "Triforce Cup",
+      "image": "app\\media\\tracks\\MK8_Hyrule_Circuit_Course_Icon.png"
+    },
+    {
+      "name": "Neo Bowser City 3DS",
+      "cup": "Bell Cup",
+      "image": "app\\media\\tracks\\MK8_3DS_Neo_Bowser_City_Course_Icon.png"
+    },
+    {
+      "name": "Ribbon Road GBA",
+      "cup": "Bell Cup",
+      "image": "app\\media\\tracks\\MK8_GBA_Ribbon_Road_Course_Icon.png"
+    },
+    {
+      "name": "Super Bell Subway",
+      "cup": "Bell Cup",
+      "image": "app\\media\\tracks\\MK8_Super_Bell_Subway_Course_Icon.png"
+    },
+    {
+      "name": "Big Blue",
+      "cup": "Bell Cup",
+      "image": "app\\media\\tracks\\MK8_Big_Blue_Course_Icon.png"
+    },
+    {
+      "name": "Paris Promenade Tour",
+      "cup": "Golden Dash Cup",
+      "image": "app\\media\\tracks\\MK8D_Tour_Paris_Promenade_Course_Icon.png"
+    },
+    {
+      "name": "Toad Circuit 3DS",
+      "cup": "Golden Dash Cup",
+      "image": "app\\media\\tracks\\MK8D_3DS_Toad_Circuit_Course_Icon.png"
+    },
+    {
+      "name": "Choco Mountain N64",
+      "cup": "Golden Dash Cup",
+      "image": "app\\media\\tracks\\MK8D_N64_Choco_Mountain_Course_Icon.png"
+    },
+    {
+      "name": "Coconut Mall Wii",
+      "cup": "Golden Dash Cup",
+      "image": "app\\media\\tracks\\MK8D_Wii_Coconut_Mall_Course_Icon.png"
+    },
+    {
+      "name": "Tokyo Blur Tour",
+      "cup": "Lucky Cat Cup",
+      "image": "app\\media\\tracks\\MK8D_Tour_Tokyo_Blur_Course_Icon.png"
+    },
+    {
+      "name": "Shroom Ridge DS",
+      "cup": "Lucky Cat Cup",
+      "image": "app\\media\\tracks\\MK8D_DS_Shroom_Ridge_Course_Icon.png"
+    },
+    {
+      "name": "Sky Garden GBA",
+      "cup": "Lucky Cat Cup",
+      "image": "app\\media\\tracks\\MK8D_GBA_Sky_Garden_Course_Icon.png"
+    },
+    {
+      "name": "Ninja Hideaway",
+      "cup": "Lucky Cat Cup",
+      "image": "app\\media\\tracks\\MK8D_Ninja_Hideaway_Course_Icon.png"
+    },
+    {
+      "name": "New York Minute Tour",
+      "cup": "Turnip Cup",
+      "image": "app\\media\\tracks\\MK8D_Tour_New_York_Minute_Course_Icon.png"
+    },
+    {
+      "name": "Mario Circuit 3 SNES",
+      "cup": "Turnip Cup",
+      "image": "app\\media\\tracks\\MK8D_SNES_Mario_Circuit_3_Course_Icon.png"
+    },
+    {
+      "name": "Kalamari Desert N64",
+      "cup": "Turnip Cup",
+      "image": "app\\media\\tracks\\MK8D_N64_Kalimari_Desert_Course_Icon.png"
+    },
+    {
+      "name": "Waluigi Pinball DS",
+      "cup": "Turnip Cup",
+      "image": "app\\media\\tracks\\MK8D_DS_Waluigi_Pinball_Course_Icon.png"
+    },
+    {
+      "name": "Sydney Sprint Tour",
+      "cup": "Propeller Cup",
+      "image": "app\\media\\tracks\\MK8D_Tour_Sydney_Sprint_Course_Icon.png"
+    },
+    {
+      "name": "Snow Land GBA",
+      "cup": "Propeller Cup",
+      "image": "app\\media\\tracks\\MK8D_GBA_Snow_Land_Course_Icon.png"
+    },
+    {
+      "name": "Mushroom Gorge Wii",
+      "cup": "Propeller Cup",
+      "image": "app\\media\\tracks\\MK8D_Wii_Mushroom_Gorge_Course_Icon.png"
+    },
+    {
+      "name": "Sky-High Sundae",
+      "cup": "Propeller Cup",
+      "image": "app\\media\\tracks\\MK8D_Sky-High_Sundae_Course_Icon.png"
+    },
+    {
+      "name": "London Loop",
+      "cup": "Rock Cup",
+      "image": "app\\media\\tracks\\MK8D_Tour_London_Loop_Course_Icon.png"
+    },
+    {
+      "name": "Boo Lake",
+      "cup": "Rock Cup",
+      "image": "app\\media\\tracks\\MK8D_GBA_Boo_Lake_Course_Icon.png"
+    },
+    {
+      "name": "Rock Rock Mountain",
+      "cup": "Rock Cup",
+      "image": "app\\media\\tracks\\MK8D_3DS_Rock_Rock_Mountain_Course_Icon.png"
+    },
+    {
+      "name": "Maple Treeway",
+      "cup": "Rock Cup",
+      "image": "app\\media\\tracks\\MK8D_Wii_Maple_Treeway_Course_Icon.png"
+    },
+    {
+      "name": "Berlin Byways",
+      "cup": "Moon Cup",
+      "image": "app\\media\\tracks\\MK8D_Tour_Berlin_Byways_Course_Icon.png"
+    },
+    {
+      "name": "Peach Gardens",
+      "cup": "Moon Cup",
+      "image": "app\\media\\tracks\\MK8D_DS_Peach_Gardens_Course_Icon.png"
+    },
+    {
+      "name": "Merry Mountain",
+      "cup": "Moon Cup",
+      "image": "app\\media\\tracks\\MK8D_Merry_Mountain_Course_Icon.png"
+    },
+    {
+      "name": "Rainbow Road 3DS",
+      "cup": "Moon Cup",
+      "image": "app\\media\\tracks\\MK8D_3DS_Rainbow_Road_Course_Icon.png"
+    },
+    {
+      "name": "Amsterdam Drift",
+      "cup": "Fruit Cup",
+      "image": "app\\media\\tracks\\MK8D_Tour_Amsterdam_Drift_Course_Icon.png"
+    },
+    {
+      "name": "Riverside Park",
+      "cup": "Fruit Cup",
+      "image": "app\\media\\tracks\\MK8D_GBA_Riverside_Park_Course_Icon.png"
+    },
+    {
+      "name": "DK Summit",
+      "cup": "Fruit Cup",
+      "image": "app\\media\\tracks\\MK8D_Wii_DK_Summit_Course_Icon.png"
+    },
+    {
+      "name": "Yoshi's Island",
+      "cup": "Fruit Cup",
+      "image": "app\\media\\tracks\\MK8D_Yoshi's_Island_Course_Icon.png"
+    },
+    {
+      "name": "Bangkok Rush",
+      "cup": "Boomerang Cup",
+      "image": "app\\media\\tracks\\MK8D_Tour_Bangkok_Rush_Course_Icon.png"
+    },
+    {
+      "name": "Mario Circuit DS",
+      "cup": "Boomerang Cup",
+      "image": "app\\media\\tracks\\MK8D_DS_Mario_Circuit_Course_Icon.png"
+    },
+    {
+      "name": "Waluigi Stadium",
+      "cup": "Boomerang Cup",
+      "image": "app\\media\\tracks\\MK8D_GCN_Waluigi_Stadium_Course_Icon.png"
+    },
+    {
+      "name": "Singapore Speedway",
+      "cup": "Boomerang Cup",
+      "image": "app\\media\\tracks\\MK8D_Tour_Singapore_Speedway_Course_Icon.png"
+    }
+  ]
 }
