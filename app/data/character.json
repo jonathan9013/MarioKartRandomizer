@@ -151,6 +151,11 @@
 			"image": "app\\media\\characters\\MK8D_Birdo_Icon.png"
 		},
 		{
+			"name": "Kamek",
+			"weight": "Medium",
+			"image": "app\\media\\characters\\MK8DX_Kamek_Icon.png"
+		},
+		{
 			"name": "Donkey Kong",
 			"weight": "Heavy",
 			"image": "app\\media\\characters\\MK8_DKong_Icon.png"
@@ -209,6 +214,17 @@
 			"name": "Dry Bowser",
 			"weight": "Heavy",
 			"image": "app\\media\\characters\\MK8_Dry_Bowser_Icon.png"
+		},
+		{
+			"name": "Petey Piranha",
+			"weight": "Heavy",
+			"image": "app\\media\\characters\\MK8DX_Petey_Piranha_Icon.png"
+		},
+		{
+			"name": "Wiggler",
+			"weight": "Heavy",
+			"image": "app\\media\\characters\\MK8DX_Wiggler_Icon.png"
 		}
+
 	]
 }

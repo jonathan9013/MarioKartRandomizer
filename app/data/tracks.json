@@ -399,6 +399,46 @@
       "name": "Singapore Speedway",
       "cup": "Boomerang Cup",
       "image": "app\\media\\tracks\\MK8D_Tour_Singapore_Speedway_Course_Icon.png"
+    },
+    {
+      "name": "Athens Dash",
+      "cup": "Feather Cup",
+      "image": "app\\media\\tracks\\MK8D_Tour_Athens_Dash_Course_Icon.png"
+    },
+    {
+      "name": "Daisy Cruiser",
+      "cup": "Feather Cup",
+      "image": "app\\media\\tracks\\MK8D_GCN_Daisy_Cruiser_Course_Icon.png"
+    },
+    {
+      "name": "Moonview Highway",
+      "cup": "Feather Cup",
+      "image": "app\\media\\tracks\\MK8D_Wii_Moonview_Highway_Course_Icon.png"
+    },
+    {
+      "name": "Squeaky Clean Sprint",
+      "cup": "Feather Cup",
+      "image": "app\\media\\tracks\\MK8D_Squeaky_Clean_Sprint_Course_Icon.png"
+    },
+    {
+      "name": "Los Angeles Laps",
+      "cup": "Cherry Cup",
+      "image": "app\\media\\tracks\\MK8D_Tour_Los_Angeles_Laps_Course_Icon.png"
+    },
+    {
+      "name": "Sunset Wilds",
+      "cup": "Cherry Cup",
+      "image": "app\\media\\tracks\\MK8D_GBA_Sunset_Wilds_Course_Icon.png"
+    },
+    {
+      "name": "Koopa Cape",
+      "cup": "Cherry Cup",
+      "image": "app\\media\\tracks\\MK8D_Wii_Koopa_Cape_Course_Icon.png"
+    },
+    {
+      "name": "Vancouver Velocity",
+      "cup": "Cherry Cup",
+      "image": "app\\media\\tracks\\MK8D_Tour_Vancouver_Velocity_Course_Icon.png"
     }
   ]
 }
