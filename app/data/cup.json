@@ -79,6 +79,14 @@
 		{
 			"name": "Boomerang Cup",
 			"image": "app\\media\\cups\\MK8D_BCP_Boomerang_Emblem.png"
+		},
+		{
+			"name": "Feather Cup",
+			"image": "app\\media\\cups\\MK8D_BCP_Feather_Emblem.png"
+		},
+		{
+			"name": "Cherry Cup",
+			"image": "app\\media\\cups\\MK8D_BCP_Cherry_Emblem.png"
 		}
 	]
 }
