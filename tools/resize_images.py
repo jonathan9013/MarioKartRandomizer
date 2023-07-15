@@ -2,7 +2,7 @@ from os import listdir
 from PIL import Image
 
 # get the path/directory
-folder_dir = "app\media\\tracks"
+folder_dir = r"app\media\cups"
 for images in listdir(folder_dir):
     image_dir = folder_dir + '\\' + images
     im1 = Image.open(image_dir)
