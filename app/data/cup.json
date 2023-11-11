@@ -87,6 +87,14 @@
 		{
 			"name": "Cherry Cup",
 			"image": "app\\media\\cups\\MK8D_BCP_Cherry_Emblem.png"
+		},
+		{
+			"name": "Acorn Cup",
+			"image": "app\\media\\cups\\MK8D_BCP_Acorn_Emblem.png"
+		},
+		{
+			"name": "Spiny Cup",
+			"image": "app\\media\\cups\\MK8D_BCP_Spiny_Emblem.png"
 		}
 	]
 }

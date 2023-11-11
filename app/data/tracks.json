@@ -439,6 +439,46 @@
       "name": "Vancouver Velocity",
       "cup": "Cherry Cup",
       "image": "app\\media\\tracks\\MK8D_Tour_Vancouver_Velocity_Course_Icon.png"
+    },
+    {
+      "name": "Rome Avanti",
+      "cup": "Acorn Cup",
+      "image": "app\\media\\tracks\\MK8D_Tour_Rome_Avanti_Course_Icon.png"
+    },
+    {
+      "name": "DK Mountain",
+      "cup": "Acorn Cup",
+      "image": "app\\media\\tracks\\MK8D_GCN_DK_Mountain_Course_Icon.png"
+    },
+    {
+      "name": "Daisy Circuit",
+      "cup": "Acorn Cup",
+      "image": "app\\media\\tracks\\MK8D_Wii_Daisy_Circuit_Course_Icon.png"
+    },
+    {
+      "name": "Piranha Plant Cove",
+      "cup": "Acorn Cup",
+      "image": "app\\media\\tracks\\MK8D_Piranha_Plant_Cove_Course_Icon.png"
+    },
+    {
+      "name": "Madrid Drive",
+      "cup": "Spiny Cup",
+      "image": "app\\media\\tracks\\MK8D_Tour_Madrid_Drive_Course_Icon.png"
+    },
+    {
+      "name": "Rosalina's Ice World",
+      "cup": "Spiny Cup",
+      "image": "app\\media\\tracks\\MK8D_3DS_Rosalina's_Ice_World_Course_Icon.png"
+    },
+    {
+      "name": "Bowser Castle 3",
+      "cup": "Spiny Cup",
+      "image": "app\\media\\tracks\\MK8D_SNES_Bowser_Castle_3_Course_Icon.png"
+    },
+    {
+      "name": "Rainbow Road",
+      "cup": "Spiny Cup",
+      "image": "app\\media\\tracks\\MK8D_Wii_Rainbow_Road_Course_Icon.png"
     }
   ]
 }
