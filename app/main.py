@@ -171,11 +171,10 @@ def randomizeTrack(reroll, reset = 4):
 	while track in usedTracks:
 		track = tracks[random.randint(0, len(tracks)-1)]
 	currentTrack = track
-	if not reroll:
-		trackReset = trackReset - 1
-		if trackReset == 0:
-			usedTracks = []
-			trackReset = reset
+	trackReset = trackReset - 1
+	if trackReset == 0:
+		usedTracks = []
+		trackReset = reset
 	usedTracks.append(track)
 
 def randomizeCup():

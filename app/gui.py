@@ -254,6 +254,7 @@ while True:
 
         window['track_image1'].update(filename=track_icon)
         window['track_cup1'].update(track_cup_text)
+        window['track_reset'].update(getTrackReset())
 
     if event == '-REROLLTRACK2-':
         randomizeTrack(True)
@@ -263,6 +264,7 @@ while True:
 
         window['track_image2'].update(filename=track_icon)
         window['track_cup2'].update(track_cup_text)
+        window['track_reset'].update(getTrackReset())
 
     if event == '-REROLLTRACK3-':
         randomizeTrack(True)
@@ -272,6 +274,7 @@ while True:
 
         window['track_image3'].update(filename=track_icon)
         window['track_cup3'].update(track_cup_text)
+        window['track_reset'].update(getTrackReset())
 
     if event == '-REROLLTRACK4-':
         randomizeTrack(True)
@@ -281,6 +284,7 @@ while True:
 
         window['track_image4'].update(filename=track_icon)
         window['track_cup4'].update(track_cup_text)
+        window['track_reset'].update(getTrackReset())
 
     if event == '-REROLLTRACK5-':
         randomizeTrack(True)
@@ -290,6 +294,7 @@ while True:
 
         window['track_image5'].update(filename=track_icon)
         window['track_cup5'].update(track_cup_text)
+        window['track_reset'].update(getTrackReset())
 
     if event == '-REROLLTRACK6-':
         randomizeTrack(True)
@@ -299,6 +304,7 @@ while True:
 
         window['track_image6'].update(filename=track_icon)
         window['track_cup6'].update(track_cup_text)
+        window['track_reset'].update(getTrackReset())
 
     if event == '-REROLLTRACK7-':
         randomizeTrack(True)
@@ -308,6 +314,7 @@ while True:
 
         window['track_image7'].update(filename=track_icon)
         window['track_cup7'].update(track_cup_text)
+        window['track_reset'].update(getTrackReset())
 
     if event == '-REROLLTRACK8-':
         randomizeTrack(True)
@@ -317,6 +324,7 @@ while True:
 
         window['track_image8'].update(filename=track_icon)
         window['track_cup8'].update(track_cup_text)
+        window['track_reset'].update(getTrackReset())
 
     if event == '-GENERATETRACK-':
         window['track1'].update(visible=False)
@@ -328,7 +336,7 @@ while True:
         window['track7'].update(visible=False)
         window['track8'].update(visible=False)
         numberOfTracks = gui.popup_get_text('Enter the number of tracks you would like to generate (up to 8): ', keep_on_top=True)
-        if numberOfTracks != None and numberOfTracks.isnumeric():
+        if numberOfTracks != None and numberOfTracks.isnumeric() and int(numberOfTracks)<9:
             numberOfTracks = int(numberOfTracks)
             if numberOfTracks == 1:
                 randomizeTrack(False, int(values["resetInput"]))
